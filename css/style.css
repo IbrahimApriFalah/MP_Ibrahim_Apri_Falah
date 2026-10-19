@@ -1,0 +1,391 @@
+/* RESET DASAR */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-dark: #0f1115;
+  --bg-card: #181b22;
+  --primary-red: #d62828;
+  --primary-red-hover: #b81d1d;
+  --text-light: #f8f9fa;
+  --text-muted: #a0aec0;
+  --border-color: #2d3748;
+  --font-main: "Segoe UI", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-main);
+  line-height: 1.6;
+}
+
+/* NAVBAR (Sticky) */
+.navbar-container {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: rgba(15, 17, 21, 0.95);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+}
+
+.logo a {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--text-light);
+  text-decoration: none;
+}
+
+.logo a span {
+  color: var(--primary-red);
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--primary-red);
+}
+
+/* HERO SECTION */
+.hero-section {
+  background: linear-gradient(135deg, #1c0505 0%, #0f1115 100%);
+  text-align: center;
+  padding: 5rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.badge {
+  display: inline-block;
+  background-color: rgba(214, 40, 40, 0.15);
+  color: var(--primary-red);
+  border: 1px solid var(--primary-red);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* BUTTONS */
+.btn {
+  padding: 0.7rem 1.5rem;
+  font-weight: bold;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background-color: var(--primary-red);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-red-hover);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-light);
+  border: 1px solid var(--border-color);
+}
+
+.btn-secondary:hover {
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+/* SECTIONS & LAYOUT */
+.section-container {
+  max-width: 1100px;
+  margin: 3.5rem auto;
+  padding: 0 1.5rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.header-line {
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-red);
+  margin: 0.5rem auto 0 auto;
+}
+
+.about-content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.about-text {
+  flex: 1;
+}
+.about-media {
+  flex: 1;
+}
+
+.styled-img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* CARDS (CSS Grid) */
+.players-grid,
+.info-grid,
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.player-card,
+.info-box,
+.skill-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.3s;
+  padding: 1rem;
+}
+
+.player-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--primary-red);
+}
+
+.card-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: var(--primary-red);
+  color: #fff;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.5rem;
+  border-radius: 4px;
+}
+
+/* FIX FOTO PEMAIN KEPOTONG */
+.card-img-wrapper {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.card-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+}
+
+.card-body h3,
+.info-box h3,
+.skill-card h3 {
+  margin: 0.5rem 0 0.2rem 0;
+  color: var(--text-light);
+}
+
+.player-role {
+  font-size: 0.85rem;
+  color: var(--primary-red);
+  margin-bottom: 0.5rem;
+}
+
+.player-desc,
+.info-box p,
+.skill-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* TAMPILAN KARTU INFORMASI PRIBADI AK SEN MERAH */
+.info-box.accent-border {
+  position: relative;
+  border-top: 3px solid var(--primary-red);
+  background: linear-gradient(145deg, #181b22 0%, #20242e 100%);
+  padding-top: 1.8rem;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.info-box.accent-border:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(214, 40, 40, 0.2);
+}
+
+.info-badge {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  color: var(--primary-red);
+  letter-spacing: 1px;
+}
+
+/* TABEL */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 0.8rem 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.custom-table th {
+  background-color: rgba(214, 40, 40, 0.15);
+  color: var(--primary-red);
+}
+
+/* FORM */
+.custom-form {
+  max-width: 550px;
+  margin: 0 auto;
+  background-color: var(--bg-card);
+  padding: 2rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.7rem;
+  background-color: var(--bg-dark);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-light);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary-red);
+}
+
+/* PROFIL HEADER */
+.profile-hero {
+  background-color: var(--bg-card);
+  padding: 3rem 1rem;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-avatar img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-red);
+  margin-bottom: 1rem;
+  object-fit: cover;
+  object-position: top center;
+}
+
+.profile-subtitle {
+  color: var(--primary-red);
+  font-size: 0.9rem;
+}
+
+/* FOOTER */
+.footer-container {
+  background-color: #08090c;
+  border-top: 1px solid var(--border-color);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-content p {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer-content a {
+  color: var(--primary-red);
+  text-decoration: none;
+}
