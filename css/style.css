@@ -1,4 +1,3 @@
-/* RESET DASAR */
 * {
   margin: 0;
   padding: 0;
@@ -27,7 +26,6 @@ body {
   line-height: 1.6;
 }
 
-/* NAVBAR (Sticky) */
 .navbar-container {
   position: sticky;
   top: 0;
@@ -74,7 +72,6 @@ body {
   color: var(--primary-red);
 }
 
-/* HERO SECTION */
 .hero-section {
   background: linear-gradient(135deg, #1c0505 0%, #0f1115 100%);
   text-align: center;
@@ -111,7 +108,6 @@ body {
   gap: 1rem;
 }
 
-/* BUTTONS */
 .btn {
   padding: 0.7rem 1.5rem;
   font-weight: bold;
@@ -146,7 +142,6 @@ body {
   width: 100%;
 }
 
-/* SECTIONS & LAYOUT */
 .section-container {
   max-width: 1100px;
   margin: 3.5rem auto;
@@ -187,7 +182,6 @@ body {
   border-radius: 6px;
 }
 
-/* CARDS (CSS Grid) */
 .players-grid,
 .info-grid,
 .skills-grid {
@@ -224,7 +218,6 @@ body {
   border-radius: 4px;
 }
 
-/* FIX FOTO PEMAIN KEPOTONG */
 .card-img-wrapper {
   width: 100%;
   height: 220px;
@@ -260,7 +253,6 @@ body {
   color: var(--text-muted);
 }
 
-/* TAMPILAN KARTU INFORMASI PRIBADI AK SEN MERAH */
 .info-box.accent-border {
   position: relative;
   border-top: 3px solid var(--primary-red);
@@ -286,7 +278,6 @@ body {
   letter-spacing: 1px;
 }
 
-/* TABEL */
 .table-responsive {
   overflow-x: auto;
 }
@@ -312,7 +303,6 @@ body {
   color: var(--primary-red);
 }
 
-/* FORM */
 .custom-form {
   max-width: 550px;
   margin: 0 auto;
@@ -348,7 +338,6 @@ body {
   border-color: var(--primary-red);
 }
 
-/* PROFIL HEADER */
 .profile-hero {
   background-color: var(--bg-card);
   padding: 3rem 1rem;
@@ -371,7 +360,6 @@ body {
   font-size: 0.9rem;
 }
 
-/* FOOTER */
 .footer-container {
   background-color: #08090c;
   border-top: 1px solid var(--border-color);
