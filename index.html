@@ -3,16 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Garuda Fans — Fan-made platform untuk mengenal skuad, mengikuti pertandingan, dan mendukung Timnas Indonesia."
+    />
     <title>Garuda Fans — Official Fan Page Timnas Indonesia</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body id="top">
-    <header class="navbar-container">
-      <nav class="navbar">
-        <div class="logo">
-          <a href="index.html">GARUDA <span>FANS</span></a>
-        </div>
-        <ul class="nav-links">
+    <!-- ==============================
+         NAVIGATION
+    ============================== -->
+    <header class="site-header">
+      <nav class="navbar container">
+        <a href="index.html" class="logo"> GARUDA<span>FANS</span> </a>
+
+        <ul class="nav-links" id="nav-menu">
           <li><a href="index.html" class="active">Home</a></li>
           <li><a href="#about">Tentang</a></li>
           <li><a href="#players">Skuad</a></li>
@@ -20,437 +27,698 @@
           <li><a href="#favorite-form">Dukungan</a></li>
           <li><a href="profile.html">Profil Pembuat</a></li>
         </ul>
+
+        <button
+          class="menu-toggle"
+          id="menu-toggle"
+          type="button"
+          aria-label="Open navigation menu"
+          aria-expanded="false"
+          aria-controls="nav-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </nav>
     </header>
 
     <main>
+      <!-- ==============================
+           HERO SECTION
+      ============================== -->
       <section class="hero-section">
-        <div class="hero-content">
-          <span class="badge">FAN PAGE TIMNAS INDONESIA</span>
-          <h1>DUKUNG GARUDA DI PANGGUNG DUNIA</h1>
-          <p>
-            Bersatu mendukung perjuangan Tim Nasional Sepak Bola Indonesia
-            menuju kejayaan Internasional!
-          </p>
-          <div class="hero-buttons">
-            <a href="#players" class="btn btn-primary">Lihat Pemain</a>
-            <a
-              href="https://pssi.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn btn-secondary"
-              >Situs Resmi PSSI</a
-            >
-          </div>
-        </div>
-      </section>
+        <div class="hero-overlay"></div>
 
-      <section id="about" class="section-container">
-        <div class="section-header">
-          <h2>Tentang Timnas Indonesia</h2>
-          <div class="header-line"></div>
-        </div>
-        <div class="about-content">
-          <div class="about-text">
+        <div class="hero-content container">
+          <div class="hero-text">
+            <span class="hero-badge">
+              <span class="badge-dot"></span>
+              THE PRIDE OF INDONESIA
+            </span>
+
+            <h1>
+              ONE NATION.
+              <span>ONE PASSION.</span>
+              ONE GARUDA.
+            </h1>
+
             <p>
-              <strong>Tim Nasional Sepak Bola Indonesia</strong> (Garuda) adalah
-              tim yang mewakili Indonesia dalam kejuaraan sepak bola
-              internasional. Berada di bawah naungan Persatuan Sepakbola Seluruh
-              Indonesia (PSSI), Timnas terus menunjukkan perkembangan pesat di
-              kancah Asia.
+              Bukan sekadar sepak bola, ini tentang kebanggaan, perjuangan, dan
+              semangat jutaan rakyat Indonesia. Bersama Garuda, kita melangkah
+              menuju sejarah.
             </p>
-            <br />
-            <p>
-              Dengan semangat pantang menyerah dan dukungan puluhan juta
-              suporter, Garuda siap mengukir sejarah baru di kompetisi
-              kualifikasi dunia.
-            </p>
+
+            <div class="hero-buttons">
+              <a href="#players" class="btn btn-primary">
+                Explore The Squad
+                <span>→</span>
+              </a>
+
+              <a href="#about" class="btn btn-outline"> Discover More </a>
+            </div>
+
+            <div class="hero-stats">
+              <div class="stat-item">
+                <h3>IND</h3>
+                <p>National Team</p>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <h3>GARUDA</h3>
+                <p>Our Identity</p>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <h3>ONE</h3>
+                <p>United Nation</p>
+              </div>
+            </div>
           </div>
-          <div class="about-media">
+
+          <div class="hero-visual">
             <img
-              src="/assets/images/about.jpg"
-              alt="Suporter Sepak Bola Indonesia"
-              class="styled-img"
+              src="assets/images/about.jpg"
+              alt="Suporter Timnas Indonesia mendukung Garuda"
             />
+
+            <div class="hero-image-caption">
+              <span>THE SPIRIT OF</span>
+              <h3>INDONESIA</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-bottom">
+          <span>GARUDA FANS</span>
+          <span>SUPPORT WITH PRIDE. FIGHT WITH HEART.</span>
+        </div>
+      </section>
+
+      <!-- ==============================
+           ABOUT SECTION
+      ============================== -->
+      <section class="about-section" id="about">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">WHO WE ARE</span>
+
+            <h2>MORE THAN <span>FOOTBALL.</span></h2>
+
+            <p>
+              Garuda Fans adalah ruang bagi para pendukung Timnas Indonesia
+              untuk mengenal skuad, mengikuti perjalanan tim, dan merayakan
+              semangat sepak bola Indonesia.
+            </p>
+          </div>
+
+          <div class="about-content">
+            <div class="about-image">
+              <img
+                src="assets/images/about.jpg"
+                alt="Semangat pendukung Timnas Indonesia"
+              />
+
+              <div class="image-tag">
+                <span>EST.</span>
+                <strong>INDONESIA</strong>
+              </div>
+            </div>
+
+            <div class="about-text">
+              <span class="content-label">OUR PASSION</span>
+
+              <h3>One Team.<br />Millions of Dreams.</h3>
+
+              <p>
+                Sepak bola menyatukan kita tanpa memandang perbedaan. Setiap
+                pertandingan membawa harapan, setiap perjuangan menciptakan
+                kebanggaan, dan setiap dukungan menjadi bagian dari perjalanan
+                Garuda.
+              </p>
+
+              <p>
+                Melalui Garuda Fans, kami ingin menghadirkan informasi seputar
+                Timnas Indonesia dalam satu tempat yang mudah diakses oleh
+                seluruh penggemar.
+              </p>
+
+              <a href="#players" class="text-link">
+                Meet The Squad <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="about-values">
+            <div class="value-card">
+              <span class="value-number">01</span>
+              <h3>PRIDE</h3>
+              <p>Bangga menjadi bagian dari sepak bola Indonesia.</p>
+            </div>
+
+            <div class="value-card">
+              <span class="value-number">02</span>
+              <h3>UNITY</h3>
+              <p>Bersatu memberikan dukungan untuk satu lambang Garuda.</p>
+            </div>
+
+            <div class="value-card">
+              <span class="value-number">03</span>
+              <h3>PASSION</h3>
+              <p>Menjaga semangat dan kecintaan terhadap Timnas Indonesia.</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="players" class="section-container">
-        <div class="section-header">
-          <h2>Skuad Timnas Indonesia</h2>
-          <div class="header-line"></div>
-        </div>
-        <div class="players-grid">
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Emil Audero.jpeg" alt="Foto E. Audero" />
-            </div>
-            <div class="card-body">
-              <h3>E. Audero</h3>
-              <p class="player-role">Posisi: Penjaga Gawang</p>
-            </div>
-          </article>
+      <!-- ==============================
+           PLAYERS SECTION
+      ============================== -->
+      <section class="players-section" id="players">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">MEET THE TEAM</span>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Maarten Paes.jpeg" alt="Foto M. Paes" />
-            </div>
-            <div class="card-body">
-              <h3>M. Paes</h3>
-              <p class="player-role">Posisi: Penjaga gawang</p>
-            </div>
-          </article>
+            <h2>THE GARUDA <span>SQUAD.</span></h2>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Nadeo Arga Winata - U23.jpeg" alt="Foto N. Argawinata" />
-            </div>
-            <div class="card-body">
-              <h3>N. Argawinata</h3>
-              <p class="player-role">Posisi: Penjaga gawang</p>
-            </div>
-          </article>
+            <p>
+              Get to know the players who represent Indonesia and carry the
+              Garuda emblem with pride.
+            </p>
+          </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Kevin Diks.jpeg" alt="Foto K. Diks" />
-            </div>
-            <div class="card-body">
-              <h3>K. Diks</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+          <!-- Player Category Filter -->
+          <div class="player-categories">
+            <button
+              class="category-btn active"
+              type="button"
+              data-category="all"
+            >
+              All Players
+            </button>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Dion Markx.jpeg" alt="Foto D. Markx" />
-            </div>
-            <div class="card-body">
-              <h3>D. Markx</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+            <button
+              class="category-btn"
+              type="button"
+              data-category="goalkeeper"
+            >
+              Goalkeepers
+            </button>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Jordi Amat.jpeg" alt="Foto J. Amat" />
-            </div>
-            <div class="card-body">
-              <h3>J. Amat</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+            <button class="category-btn" type="button" data-category="defender">
+              Defenders
+            </button>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Rizky Ridho.jpeg" alt="Foto Rizky Ridho" />
-            </div>
-            <div class="card-body">
-              <h3>Rizky Ridho</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+            <button
+              class="category-btn"
+              type="button"
+              data-category="midfielder"
+            >
+              Midfielders
+            </button>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Shayne Pattynama.jpeg" alt="Foto S. Pattynama" />
-            </div>
-            <div class="card-body">
-              <h3>S. Pattynama</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+            <button class="category-btn" type="button" data-category="forward">
+              Forwards
+            </button>
+          </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Calvin Verdonk.jpeg" alt="Foto C. Verdonk" />
-            </div>
-            <div class="card-body">
-              <h3>C. Verdonk</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+          <!-- Horizontal Player Gallery -->
+          <div class="players-gallery">
+            <!-- Player 1 -->
+            <article
+              class="player-card"
+              data-category="defender"
+              data-player="jay-idzes"
+            >
+              <button
+                class="player-card-btn"
+                type="button"
+                data-player="jay-idzes"
+                aria-label="View Jay Idzes profile"
+              >
+                <div class="player-image">
+                  <img
+                    src="assets/images/players/jay-idzes.jpg"
+                    alt="Jay Idzes"
+                    loading="lazy"
+                  />
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Elkan Baggot.jpeg" alt="Foto E. Baggott" />
-            </div>
-            <div class="card-body">
-              <h3>E. Baggott</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+                  <span class="player-number">03</span>
+                  <span class="view-player">VIEW PROFILE ↗</span>
+                </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Dean James.jpeg" alt="Foto D. James" />
-            </div>
-            <div class="card-body">
-              <h3>D. James</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+                <div class="player-info">
+                  <span class="player-position">DEFENDER</span>
+                  <h3>Jay Idzes</h3>
+                  <p>Indonesia National Team</p>
+                </div>
+              </button>
+            </article>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Nathan Tjoe-A-On.jpeg" alt="Foto N. Tjoe-A-On" />
-            </div>
-            <div class="card-body">
-              <h3>N. Tjoe-A-On</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+            <!-- Player 2 -->
+            <article
+              class="player-card"
+              data-category="defender"
+              data-player="rizky-ridho"
+            >
+              <button
+                class="player-card-btn"
+                type="button"
+                data-player="rizky-ridho"
+                aria-label="View Rizky Ridho profile"
+              >
+                <div class="player-image">
+                  <img
+                    src="assets/images/players/rizky-ridho.jpg"
+                    alt="Rizky Ridho"
+                    loading="lazy"
+                  />
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Justin hubner.jpeg" alt="Foto J. Hubner" />
-            </div>
-            <div class="card-body">
-              <h3>J. Hubner</h3>
-              <p class="player-role">Posisi: Bek</p>
-            </div>
-          </article>
+                  <span class="player-number">05</span>
+                  <span class="view-player">VIEW PROFILE ↗</span>
+                </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/download.jpeg" alt="Foto E. Vikri" />
-            </div>
-            <div class="card-body">
-              <h3>E. Vikri</h3>
-              <p class="player-role">Posisi: Gelandang</p>
-            </div>
-          </article>
+                <div class="player-info">
+                  <span class="player-position">DEFENDER</span>
+                  <h3>Rizky Ridho</h3>
+                  <p>Indonesia National Team</p>
+                </div>
+              </button>
+            </article>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/joey pelupessy.jpeg" alt="Foto J. Pelupessy" />
-            </div>
-            <div class="card-body">
-              <h3>J. Pelupessy</h3>
-              <p class="player-role">Posisi: Gelandang</p>
-            </div>
-          </article>
+            <!-- Player 3 -->
+            <article
+              class="player-card"
+              data-category="midfielder"
+              data-player="marselino"
+            >
+              <button
+                class="player-card-btn"
+                type="button"
+                data-player="marselino"
+                aria-label="View Marselino Ferdinan profile"
+              >
+                <div class="player-image">
+                  <img
+                    src="assets/images/players/marselino.jpg"
+                    alt="Marselino Ferdinan"
+                    loading="lazy"
+                  />
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/049908200_1753504376-20250725AA_Timnas_Indonesia_U-23_Vs_Thailand-4.webp" alt="Foto R. Hannan" />
-            </div>
-            <div class="card-body">
-              <h3>R. Hannan</h3>
-              <p class="player-role">Posisi: Gelandang</p>
-            </div>
-          </article>
+                  <span class="player-number">07</span>
+                  <span class="view-player">VIEW PROFILE ↗</span>
+                </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/download (1).jpeg" alt="Foto D. Pamungkas" />
-            </div>
-            <div class="card-body">
-              <h3>D. Pamungkas</h3>
-              <p class="player-role">Posisi: Gelandang</p>
-            </div>
-          </article>
+                <div class="player-info">
+                  <span class="player-position">MIDFIELDER</span>
+                  <h3>Marselino Ferdinan</h3>
+                  <p>Indonesia National Team</p>
+                </div>
+              </button>
+            </article>
+          </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/download (2).jpeg" alt="Foto I. Jenner" />
-            </div>
-            <div class="card-body">
-              <h3>I. Jenner</h3>
-              <p class="player-role">Posisi: Gelandang</p>
-            </div>
-          </article>
+          <!-- Gallery Navigation -->
+          <div class="gallery-footer">
+            <p>SCROLL TO EXPLORE THE SQUAD</p>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Thom Haye.jpeg" alt="Foto T. Haye" />
-            </div>
-            <div class="card-body">
-              <h3>T. Haye</h3>
-              <p class="player-role">Posisi: Gelandang</p>
-            </div>
-          </article>
+            <div class="gallery-controls">
+              <button
+                class="gallery-arrow"
+                id="players-prev"
+                type="button"
+                aria-label="Previous players"
+              >
+                ←
+              </button>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Rizky-Eka-Pratama-PSM-Makassarr.webp" alt="Foto R. Eka Pratama" />
+              <button
+                class="gallery-arrow"
+                id="players-next"
+                type="button"
+                aria-label="Next players"
+              >
+                →
+              </button>
             </div>
-            <div class="card-body">
-              <h3>R. Eka Pratama</h3>
-              <p class="player-role">Posisi: Penyerang</p>
-            </div>
-          </article>
+          </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/download (3).jpeg" alt="Foto Y. Sayuri" />
-            </div>
-            <div class="card-body">
-              <h3>Y. Sayuri</h3>
-              <p class="player-role">Posisi: Penyerang</p>
-            </div>
-          </article>
+          <!-- Player Detail Modal -->
+          <div class="player-modal" id="player-modal" aria-hidden="true">
+            <div class="modal-overlay" data-close-modal></div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Luke Vickery.jpeg" alt="Foto L. Vickery" />
-            </div>
-            <div class="card-body">
-              <h3>L. Vickery</h3>
-              <p class="player-role">Posisi: Penyerang</p>
-            </div>
-          </article>
+            <div
+              class="modal-content"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="modal-player-name"
+            >
+              <button
+                class="modal-close"
+                type="button"
+                data-close-modal
+                aria-label="Close player details"
+              >
+                ×
+              </button>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Mitchell Baker.jpeg" alt="Foto M. Baker" />
-            </div>
-            <div class="card-body">
-              <h3>M. Baker</h3>
-              <p class="player-role">Posisi: Penyerang</p>
-            </div>
-          </article>
+              <div class="modal-player-image">
+                <img id="modal-player-image" src="" alt="" />
+              </div>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Ole Romeny.jpeg" alt="Foto O. Romeny" />
-            </div>
-            <div class="card-body">
-              <h3>O. Romeny</h3>
-              <p class="player-role">Posisi: Penyerang</p>
-            </div>
-          </article>
+              <div class="modal-player-info">
+                <span class="player-position" id="modal-player-position">
+                  PLAYER POSITION
+                </span>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/Ragnar Oratmangoen.jpeg" alt="Foto R. Oratmangoen" />
-            </div>
-            <div class="card-body">
-              <h3>R. Oratmangoen</h3>
-              <p class="player-role">Posisi: Penyerang</p>
-            </div>
-          </article>
+                <h2 id="modal-player-name">Player Name</h2>
 
-          <article class="player-card">
-            <div class="card-img-wrapper">
-              <img src="/assets/images/John Herdman.jpeg" alt="Foto J. Herdman" />
+                <p id="modal-player-description">
+                  Player information will appear here.
+                </p>
+
+                <div class="modal-player-stats">
+                  <div>
+                    <span>NUMBER</span>
+                    <strong id="modal-player-number">00</strong>
+                  </div>
+
+                  <div>
+                    <span>POSITION</span>
+                    <strong id="modal-player-role">-</strong>
+                  </div>
+
+                  <div>
+                    <span>NATIONALITY</span>
+                    <strong>Indonesia</strong>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="card-body">
-              <h3>J. Herdman</h3>
-              <p class="player-role">Posisi: Pelatih</p>
-            </div>
-          </article>
+          </div>
         </div>
       </section>
 
-      <section id="schedule" class="section-container">
-        <div class="section-header">
-          <h2>Jadwal & Hasil Indonesia</h2>
-          <div class="header-line"></div>
-        </div>
-        <div class="table-responsive">
-          <table class="custom-table">
-            <thead>
-              <tr>
-                <th>No</th>
-                <th>Tanggal & Kompetisi</th>
-                <th>Lawan</th>
-                <th>Status</th>
-                <th>Skor / Lokasi</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>25 Sep - FIFA ASEAN Cup</td>
-                <td>Singapura</td>
-                <td>Selesai (Menang)</td>
-                <td>2 - 0 (Home)</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>28 Sep - FIFA ASEAN Cup</td>
-                <td>Malaysia</td>
-                <td>Selesai (Seri)</td>
-                <td>0 - 0 (Away)</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>01 Okt - FIFA ASEAN Cup</td>
-                <td>Bangladesh</td>
-                <td>Selesai (Menang)</td>
-                <td>9 - 2 (Home)</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>05 Okt - FIFA ASEAN Cup</td>
-                <td>Thailand</td>
-                <td>Selesai (JUARA)</td>
-                <td>2 - 2 (Pen 4 - 2)</td>
-              </tr>
-            </tbody>
-          </table>
+      <!-- ==============================
+           MATCH SCHEDULE
+      ============================== -->
+      <section class="schedule-section" id="schedule">
+        <div class="container">
+          <div class="section-heading">
+            <span class="section-label">MATCH CENTER</span>
+
+            <h2>UPCOMING <span>FIXTURES.</span></h2>
+
+            <p>
+              Follow the journey of the Indonesian National Team through every
+              match and competition.
+            </p>
+          </div>
+
+          <!-- Match Filter -->
+          <div class="match-filter">
+            <button
+              class="match-filter-btn active"
+              type="button"
+              data-filter="all"
+            >
+              All Matches
+            </button>
+
+            <button
+              class="match-filter-btn"
+              type="button"
+              data-filter="upcoming"
+            >
+              Upcoming
+            </button>
+
+            <button
+              class="match-filter-btn"
+              type="button"
+              data-filter="finished"
+            >
+              Finished
+            </button>
+          </div>
+
+          <!-- Match List -->
+          <div class="match-list">
+            <!-- Match 1 -->
+            <article class="match-card" data-status="upcoming">
+              <div class="match-header">
+                <span class="match-competition"> INTERNATIONAL FRIENDLY </span>
+
+                <span class="match-status upcoming">UPCOMING</span>
+              </div>
+
+              <div class="match-content">
+                <div class="match-team">
+                  <span class="team-flag">🇮🇩</span>
+                  <h3>INDONESIA</h3>
+                </div>
+
+                <div class="match-details">
+                  <span class="match-date">TBA</span>
+                  <strong>VS</strong>
+                  <span class="match-time">TBA</span>
+                </div>
+
+                <div class="match-team">
+                  <span class="team-flag">🌏</span>
+                  <h3>OPPONENT</h3>
+                </div>
+              </div>
+
+              <div class="match-footer">
+                <span>Venue: To be announced</span>
+                <span class="match-id">MATCH 01</span>
+              </div>
+            </article>
+
+            <!-- Match 2 -->
+            <article class="match-card" data-status="upcoming">
+              <div class="match-header">
+                <span class="match-competition">
+                  INTERNATIONAL COMPETITION
+                </span>
+
+                <span class="match-status upcoming">UPCOMING</span>
+              </div>
+
+              <div class="match-content">
+                <div class="match-team">
+                  <span class="team-flag">🇮🇩</span>
+                  <h3>INDONESIA</h3>
+                </div>
+
+                <div class="match-details">
+                  <span class="match-date">TBA</span>
+                  <strong>VS</strong>
+                  <span class="match-time">TBA</span>
+                </div>
+
+                <div class="match-team">
+                  <span class="team-flag">🌏</span>
+                  <h3>OPPONENT</h3>
+                </div>
+              </div>
+
+              <div class="match-footer">
+                <span>Venue: To be announced</span>
+                <span class="match-id">MATCH 02</span>
+              </div>
+            </article>
+          </div>
+
+          <div class="schedule-note">
+            <p>
+              Match dates and details will be updated when official information
+              is available.
+            </p>
+          </div>
         </div>
       </section>
 
-      <section id="favorite-form" class="section-container">
-        <div class="section-header">
-          <h2>Kirim Pesan Dukungan</h2>
-          <p>Tuliskan doa dan semangatmu untuk skuad Garuda!</p>
-          <div class="header-line"></div>
+      <!-- ==============================
+           FAN SUPPORT SECTION
+      ============================== -->
+      <section class="support-section" id="favorite-form">
+        <div class="container">
+          <div class="support-wrapper">
+            <!-- Support Information -->
+            <div class="support-info">
+              <span class="section-label">SHOW YOUR SUPPORT</span>
+
+              <h2>
+                YOUR VOICE.<br />
+                <span>OUR STRENGTH.</span>
+              </h2>
+
+              <p>
+                Every supporter is part of the journey. Choose your favorite
+                player and send your message of encouragement to the Garuda
+                squad.
+              </p>
+
+              <div class="support-highlight">
+                <span class="highlight-icon">🇮🇩</span>
+
+                <div>
+                  <h3>ONE NATION, ONE TEAM</h3>
+                  <p>United in passion. United in pride.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Support Form -->
+            <div class="support-form-container">
+              <form id="support-form" class="support-form">
+                <div class="form-heading">
+                  <span>FAN MESSAGE</span>
+                  <h3>Send Your Support</h3>
+                </div>
+
+                <div class="form-group">
+                  <label for="fan-name">Your Name</label>
+
+                  <input
+                    type="text"
+                    id="fan-name"
+                    name="name"
+                    placeholder="Enter your name"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="favorite-player">Favorite Player</label>
+
+                  <select id="favorite-player" name="favoritePlayer" required>
+                    <option value="">Select your favorite player</option>
+                    <option value="Jay Idzes">Jay Idzes</option>
+                    <option value="Rizky Ridho">Rizky Ridho</option>
+                    <option value="Marselino Ferdinan">
+                      Marselino Ferdinan
+                    </option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="support-message">Your Message</label>
+
+                  <textarea
+                    id="support-message"
+                    name="supportMessage"
+                    rows="5"
+                    placeholder="Write your support message..."
+                    required
+                  ></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">
+                  SEND SUPPORT MESSAGE
+                  <span>→</span>
+                </button>
+
+                <p class="form-disclaimer">
+                  Your message will be received as a show of support for the
+                  Garuda squad.
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
-        <form class="custom-form">
-          <div class="form-group">
-            <label for="username">Nama Lengkap / Nickname Fans:</label>
-            <input
-              type="text"
-              id="username"
-              name="username"
-              placeholder="Masukkan nama kamu..."
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="fav-player">Pemain Favorit:</label>
-            <input
-              type="text"
-              id="fav-player"
-              name="fav_player"
-              placeholder="Contoh: Ole Romeny, Thom Haye..."
-              required
-            />
-          </div>
-
-          <div class="form-group">
-            <label for="support-msg">Pesan Semangat:</label>
-            <textarea
-              id="support-msg"
-              name="support_msg"
-              rows="4"
-              placeholder="Tuliskan pesan dukunganmu di sini..."
-            ></textarea>
-          </div>
-
-          <button type="button" class="btn btn-primary btn-block">
-            Kirim Dukungan
-          </button>
-        </form>
       </section>
     </main>
 
-    <footer class="footer-container">
-      <div class="footer-content">
-        <p>&copy; 2026 Garuda Fans Page</p>
-        <p>
-          <a href="https://pssi.org/" target="_blank" rel="noopener noreferrer"
-            >PSSI Official</a
-          >
-          |
-          <a href="#top">Ke Atas ↑</a>
-        </p>
+    <!-- ==============================
+         FOOTER
+    ============================== -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-main">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="index.html" class="logo"> GARUDA<span>FANS</span> </a>
+
+            <p>
+              A fan-made platform dedicated to the pride, passion, and journey
+              of the Indonesian National Football Team.
+            </p>
+
+            <span class="footer-tagline">
+              SUPPORT WITH PRIDE. FIGHT WITH HEART.
+            </span>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-links">
+            <h3>QUICK LINKS</h3>
+
+            <a href="index.html">Home</a>
+            <a href="#about">About</a>
+            <a href="#players">Players</a>
+            <a href="#schedule">Matches</a>
+            <a href="#favorite-form">Fan Support</a>
+          </div>
+
+          <!-- Creator Social Media -->
+          <div class="footer-social">
+            <h3>CONNECT WITH ME</h3>
+
+            <p>Designed and developed by the creator of Garuda Fans.</p>
+
+            <div class="social-list">
+              <a
+                href="https://instagram.com/USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <span>IG</span>
+                Instagram
+                <span class="social-arrow">↗</span>
+              </a>
+
+              <a
+                href="https://github.com/USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <span>GH</span>
+                GitHub
+                <span class="social-arrow">↗</span>
+              </a>
+
+              <a
+                href="https://linkedin.com/in/USERNAME"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="social-link"
+              >
+                <span>IN</span>
+                LinkedIn
+                <span class="social-arrow">↗</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+          <p>© 2026 GARUDA FANS. ALL RIGHTS RESERVED.</p>
+          <p>MADE WITH PASSION FOR INDONESIAN FOOTBALL 🇮🇩</p>
+        </div>
       </div>
     </footer>
+
+    <!-- MAIN JAVASCRIPT -->
+    <script src="js/script.js"></script>
   </body>
 </html>
