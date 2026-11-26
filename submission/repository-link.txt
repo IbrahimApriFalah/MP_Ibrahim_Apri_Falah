@@ -1,0 +1,6 @@
+GitHub Repository URL (Configured Origin Remote):
+https://github.com/IbrahimApriFalah/MP_Ibrahim_Apri_Falah.git
+
+Status Note:
+This repository URL is taken from the local git origin remote configuration.
+The reconstructed files in this working directory have not been committed or pushed to GitHub automatically; run `git add .`, `git commit`, and `git push origin main` manually after reviewing the final changes.

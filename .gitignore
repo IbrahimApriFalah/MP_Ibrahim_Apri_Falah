@@ -1,0 +1,15 @@
+# OS & Editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+.vscode/
+.idea/
+
+# Submission archives & temporary build artifacts
+*.zip
+*.log
+tmp/
+temp/
+scratch/
+node_modules/

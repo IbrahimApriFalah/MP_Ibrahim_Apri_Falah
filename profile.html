@@ -3,31 +3,48 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <meta
       name="description"
-      content="Meet the creator behind Garuda Fans, a fan-made platform dedicated to the Indonesian National Football Team."
+      content="Creator Profile and Squad Player Dossier for Garuda Fans — Frontend Basic Final Project at KSM VeteranTech UPNVJ."
     />
+    <title>Profile | GARUDA FANS</title>
 
-    <title>Creator Profile | Garuda Fans</title>
-
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body class="profile-page">
+  <body id="top" class="page-profile">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- ==============================
          NAVIGATION
     ============================== -->
-    <header class="site-header">
-      <nav class="navbar container">
-        <a href="index.html" class="logo"> GARUDA<span>FANS</span> </a>
+    <header class="site-header" id="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="Garuda Fans Home">
+          <img
+            src="assets/icons/garuda-crest.svg"
+            alt=""
+            class="logo-mark"
+            width="28"
+            height="28"
+          />
+          <span class="logo-text">GARUDA<span>FANS</span></span>
+        </a>
 
         <ul class="nav-links" id="nav-menu">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="index.html#about">About</a></li>
-          <li><a href="index.html#players">Players</a></li>
-          <li><a href="index.html#schedule">Matches</a></li>
-          <li><a href="profile.html" class="active">Creator</a></li>
+          <li><a href="index.html#hero" class="nav-link">Home</a></li>
+          <li><a href="index.html#about" class="nav-link">Spirit</a></li>
+          <li><a href="index.html#players" class="nav-link">Squad</a></li>
+          <li><a href="index.html#schedule" class="nav-link">Matchday</a></li>
+          <li><a href="index.html#favorite-form" class="nav-link">Support</a></li>
+          <li><a href="profile.html" class="nav-link active">Profile</a></li>
         </ul>
 
         <button
@@ -38,89 +55,73 @@
           aria-expanded="false"
           aria-controls="nav-menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
         </button>
       </nav>
+      <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- ==============================
-           PROFILE HERO
+           VIEW A: PLAYER DOSSIER (WHEN ?player=<id> IS SET)
       ============================== -->
-      <section class="profile-hero">
+      <section
+        class="dossier-section section-pad is-hidden"
+        id="player-profile-view"
+        aria-label="Player Dossier"
+      >
         <div class="container">
-          <div class="profile-heading">
-            <span class="section-label">BEHIND THE PROJECT</span>
-
-            <h1>MEET THE <span>CREATOR.</span></h1>
-
-            <p>The person behind the passion and development of Garuda Fans.</p>
+          <div class="dossier-breadcrumbs">
+            <a href="index.html#players" class="editorial-link">
+              <span>← Back to The Squad</span>
+            </a>
+            <a href="profile.html" class="btn btn-ghost btn-sm">
+              View Creator Profile
+            </a>
           </div>
 
-          <div class="profile-card">
-            <div class="profile-image">
-              <img
-                src="assets/images/Baim.jpeg"
-                alt="Portrait of Ibrahim Apri Falah, creator of Garuda Fans"
-              />
+          <div class="dossier-layout">
+            <div class="dossier-media">
+              <img id="dossier-image" src="" alt="" />
+              <span class="dossier-number-watermark" id="dossier-number-bg">00</span>
             </div>
 
-            <div class="profile-info">
-              <span class="content-label">WEBSITE DEVELOPER</span>
-
-              <h2>Ibrahim Apri Falah</h2>
-
-              <p class="profile-nickname">Also known as Baim</p>
-
-              <p class="profile-description">
-                An Informatics student with an interest in web development and
-                software engineering. Passionate about learning new technologies
-                and building meaningful digital experiences.
+            <div class="dossier-content">
+              <span class="section-index" id="dossier-position">POSITION</span>
+              <h1 class="display-heading dossier-name" id="dossier-name">
+                Player Name
+              </h1>
+              <p class="dossier-bio" id="dossier-bio">
+                Verified player note appears here.
               </p>
 
-              <div class="profile-details">
-                <div class="profile-detail-item">
-                  <span>FIELD OF STUDY</span>
-                  <strong>Informatics</strong>
+              <dl class="dossier-specs">
+                <div class="spec-item">
+                  <dt>SQUAD NUMBER</dt>
+                  <dd id="dossier-number">TBA</dd>
                 </div>
-
-                <div class="profile-detail-item">
-                  <span>INTEREST</span>
-                  <strong>Web Development</strong>
+                <div class="spec-item">
+                  <dt>POSITION</dt>
+                  <dd id="dossier-role">-</dd>
                 </div>
-
-                <div class="profile-detail-item">
-                  <span>PROJECT</span>
-                  <strong>Garuda Fans</strong>
+                <div class="spec-item">
+                  <dt>NATIONAL TEAM</dt>
+                  <dd>Indonesia</dd>
                 </div>
-              </div>
+                <div class="spec-item">
+                  <dt>VERIFIED STATS</dt>
+                  <dd id="dossier-stats">Official stats TBA (Placeholder)</dd>
+                </div>
+              </dl>
 
-              <!-- Social Media -->
-              <div class="profile-socials">
-                <a
-                  href="https://instagram.com/USERNAME"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Instagram ↗
+              <div class="dossier-nav">
+                <a href="#" class="btn btn-ghost" id="dossier-prev-link">
+                  ← Previous Player
                 </a>
-
-                <a
-                  href="https://github.com/USERNAME"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub ↗
-                </a>
-
-                <a
-                  href="https://linkedin.com/in/USERNAME"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  LinkedIn ↗
+                <a href="#" class="btn btn-primary" id="dossier-next-link">
+                  Next Player →
                 </a>
               </div>
             </div>
@@ -129,49 +130,123 @@
       </section>
 
       <!-- ==============================
-           CREATOR ABOUT
+           VIEW B: CREATOR PROFILE (DEFAULT profile.html)
       ============================== -->
-      <section class="creator-about">
+      <section class="profile-hero section-pad" id="creator-profile-view">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-label">ABOUT THE DEVELOPER</span>
+          <header class="editorial-header hero-animate">
+            <span class="section-index">BEHIND GARUDA FANS • CREATOR PROFILE</span>
+            <h1 class="display-heading">
+              MEET THE <span class="text-crimson">CREATOR.</span>
+            </h1>
+          </header>
 
-            <h2>MY <span>JOURNEY.</span></h2>
+          <div class="creator-showcase">
+            <figure class="creator-portrait-frame hero-animate">
+              <img
+                src="assets/images/Baim.jpeg"
+                alt="Portrait of Ibrahim Apri Falah, creator of Garuda Fans"
+              />
+              <figcaption>
+                <span>DEVELOPER PORTRAIT</span>
+                <strong>IBRAHIM APRI FALAH</strong>
+              </figcaption>
+            </figure>
+
+            <div class="creator-details hero-animate">
+              <span class="mono-kicker">FRONT-END DEVELOPER &amp; DESIGNER</span>
+              <h2>Ibrahim Apri Falah</h2>
+              <p class="creator-alias">Known as Baim</p>
+              <p class="creator-summary">
+                Undergraduate Informatics student at UPN "Veteran" Jakarta with a
+                focus on building responsive, expressive, and maintainable web
+                interfaces. Garuda Fans was crafted as the Final Project for Study
+                Club Frontend Basic at KSM VeteranTech UPNVJ.
+              </p>
+
+              <dl class="creator-meta-grid">
+                <div class="spec-item">
+                  <dt>INSTITUTION</dt>
+                  <dd>UPN "Veteran" Jakarta</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>STUDY PROGRAM</dt>
+                  <dd>Informatics (Undergraduate)</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>STUDY CLUB</dt>
+                  <dd>KSM VeteranTech — Frontend Basic</dd>
+                </div>
+                <div class="spec-item">
+                  <dt>PROJECT</dt>
+                  <dd>Garuda Fans Web Experience</dd>
+                </div>
+              </dl>
+
+              <div class="creator-actions">
+                <a href="index.html#players" class="btn btn-primary">
+                  <span>Back to Garuda Squad</span>
+                  <span aria-hidden="true">→</span>
+                </a>
+                <a href="index.html" class="btn btn-ghost">
+                  <span>Return to Homepage</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div class="creator-about-content">
-            <div class="creator-about-card">
-              <span>01</span>
-
-              <h3>MY BACKGROUND</h3>
-
-              <p>
-                I am an Informatics student who is continuously developing
-                knowledge and skills in the field of technology.
-              </p>
+          <!-- Creator Journey Manifesto -->
+          <div class="journey-section reveal-up">
+            <span class="mono-kicker">DEVELOPMENT JOURNEY</span>
+            <div class="journey-grid">
+              <article class="journey-card">
+                <span class="pillar-num">01</span>
+                <h3>BACKGROUND</h3>
+                <p>
+                  Building a strong foundation in computer science and modern
+                  frontend fundamentals—semantic HTML5, CSS Grid/Flexbox, and
+                  vanilla JavaScript.
+                </p>
+              </article>
+              <article class="journey-card">
+                <span class="pillar-num">02</span>
+                <h3>CRAFT &amp; INTEREST</h3>
+                <p>
+                  Exploring editorial typography, responsive layouts, and purposeful
+                  motion design to turn everyday fan pages into memorable digital
+                  experiences.
+                </p>
+              </article>
+              <article class="journey-card">
+                <span class="pillar-num">03</span>
+                <h3>OBJECTIVE</h3>
+                <p>
+                  Growing into a skilled software engineer who combines clean code
+                  structure with thoughtful visual storytelling.
+                </p>
+              </article>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div class="creator-about-card">
-              <span>02</span>
-
-              <h3>MY INTEREST</h3>
-
-              <p>
-                I am interested in web development, especially creating
-                responsive and interactive websites.
-              </p>
+      <!-- Squad Dossier Quick Launcher -->
+      <section class="profile-squad-launcher section-pad">
+        <div class="container">
+          <div class="launcher-header reveal-up">
+            <div>
+              <span class="section-index">PLAYER DOSSIER DIRECTORY</span>
+              <h2 class="display-heading">
+                INSPECT A <span class="text-crimson">PLAYER.</span>
+              </h2>
             </div>
+            <a href="index.html#players" class="editorial-link">
+              <span>Full Interactive Squad Gallery →</span>
+            </a>
+          </div>
 
-            <div class="creator-about-card">
-              <span>03</span>
-
-              <h3>MY GOAL</h3>
-
-              <p>
-                My goal is to become a skilled software engineer and build
-                useful digital products.
-              </p>
-            </div>
+          <div class="dossier-directory-grid" id="profile-squad-directory">
+            <!-- Populated dynamically from SQUAD_DATA in js/script.js -->
           </div>
         </div>
       </section>
@@ -182,81 +257,98 @@
     ============================== -->
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-main">
+        <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="logo"> GARUDA<span>FANS</span> </a>
-
+            <a href="index.html" class="logo">
+              <img
+                src="assets/icons/garuda-crest.svg"
+                alt=""
+                class="logo-mark"
+                width="28"
+                height="28"
+              />
+              <span class="logo-text">GARUDA<span>FANS</span></span>
+            </a>
             <p>
-              A fan-made platform dedicated to the pride, passion, and journey
-              of the Indonesian National Football Team.
+              An editorial supporter platform dedicated to the Indonesian National
+              Football Team. Built for Study Club Frontend Basic, KSM VeteranTech
+              UPNVJ.
             </p>
-
-            <span class="footer-tagline">
-              SUPPORT WITH PRIDE. FIGHT WITH HEART.
-            </span>
           </div>
 
-          <div class="footer-links">
-            <h3>QUICK LINKS</h3>
-
-            <a href="index.html">Home</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#players">Players</a>
-            <a href="index.html#schedule">Matches</a>
-            <a href="profile.html">Creator</a>
+          <div class="footer-col">
+            <h3>NAVIGATION</h3>
+            <ul>
+              <li><a href="index.html#hero">Home</a></li>
+              <li><a href="index.html#about">The Spirit</a></li>
+              <li><a href="index.html#players">Squad</a></li>
+              <li><a href="index.html#schedule">Matchday</a></li>
+              <li><a href="index.html#favorite-form">Supporter Voice</a></li>
+              <li><a href="profile.html">Creator &amp; Dossier Profile</a></li>
+            </ul>
           </div>
 
-          <div class="footer-social">
-            <h3>CONNECT WITH ME</h3>
-
-            <p>Designed and developed by the creator of Garuda Fans.</p>
-
-            <div class="social-list">
-              <a
-                href="https://instagram.com/USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-              >
-                <span>IG</span>
-                Instagram
-                <span class="social-arrow">↗</span>
-              </a>
-
-              <a
-                href="https://github.com/USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-              >
-                <span>GH</span>
-                GitHub
-                <span class="social-arrow">↗</span>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-              >
-                <span>IN</span>
-                LinkedIn
-                <span class="social-arrow">↗</span>
-              </a>
-            </div>
+          <div class="footer-col">
+            <h3>SOCIAL PLACEHOLDERS</h3>
+            <p class="footer-placeholder-note">
+              External links below are placeholders for the project owner to fill
+              in.
+            </p>
+            <ul class="social-placeholders">
+              <li>
+                <a
+                  href="#social-instagram-placeholder"
+                  class="social-link"
+                  data-placeholder-link="Instagram"
+                >
+                  <span>Instagram [Placeholder URL]</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#social-github-placeholder"
+                  class="social-link"
+                  data-placeholder-link="GitHub"
+                >
+                  <span>GitHub [Placeholder URL]</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#social-linkedin-placeholder"
+                  class="social-link"
+                  data-placeholder-link="LinkedIn"
+                >
+                  <span>LinkedIn [Placeholder URL]</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p>© 2026 GARUDA FANS. ALL RIGHTS RESERVED.</p>
+        <div class="footer-giant-wordmark" aria-hidden="true">GARUDA FANS</div>
 
-          <p>MADE WITH PASSION FOR INDONESIAN FOOTBALL 🇮🇩</p>
+        <div class="footer-bottom">
+          <p>© 2026 GARUDA FANS • IBRAHIM APRI FALAH • UPN "VETERAN" JAKARTA</p>
+          <button type="button" class="back-to-top" id="back-to-top">
+            <span>BACK TO TOP</span>
+            <span aria-hidden="true">↑</span>
+          </button>
         </div>
       </div>
     </footer>
 
-    <!-- MAIN JAVASCRIPT -->
-    <script src="js/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>

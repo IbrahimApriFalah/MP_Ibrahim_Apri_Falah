@@ -1,31 +1,50 @@
 <!doctype html>
-<html lang="id">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Garuda Fans — Fan-made platform untuk mengenal skuad, mengikuti pertandingan, dan mendukung Timnas Indonesia."
+      content="Garuda Fans — An immersive supporter platform dedicated to the pride, squad, and spirit of the Indonesian National Football Team."
     />
-    <title>Garuda Fans — Official Fan Page Timnas Indonesia</title>
+    <title>GARUDA FANS — Indonesian National Football Supporter Experience</title>
+
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;1,700&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
 
-  <body id="top">
+  <body id="top" class="page-home">
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <!-- ==============================
          NAVIGATION
     ============================== -->
-    <header class="site-header">
-      <nav class="navbar container">
-        <a href="index.html" class="logo"> GARUDA<span>FANS</span> </a>
+    <header class="site-header" id="site-header">
+      <nav class="navbar container" aria-label="Main navigation">
+        <a href="index.html" class="logo" aria-label="Garuda Fans Home">
+          <img
+            src="assets/icons/garuda-crest.svg"
+            alt=""
+            class="logo-mark"
+            width="28"
+            height="28"
+          />
+          <span class="logo-text">GARUDA<span>FANS</span></span>
+        </a>
 
         <ul class="nav-links" id="nav-menu">
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#about">Tentang</a></li>
-          <li><a href="#players">Skuad</a></li>
-          <li><a href="#schedule">Pertandingan</a></li>
-          <li><a href="#favorite-form">Dukungan</a></li>
-          <li><a href="profile.html">Profil Pembuat</a></li>
+          <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+          <li><a href="#about" class="nav-link" data-section="about">Spirit</a></li>
+          <li><a href="#players" class="nav-link" data-section="players">Squad</a></li>
+          <li><a href="#schedule" class="nav-link" data-section="schedule">Matchday</a></li>
+          <li><a href="#favorite-form" class="nav-link" data-section="favorite-form">Support</a></li>
+          <li><a href="profile.html" class="nav-link nav-link--profile">Profile</a></li>
         </ul>
 
         <button
@@ -36,387 +55,349 @@
           aria-expanded="false"
           aria-controls="nav-menu"
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
+          <span class="menu-line"></span>
         </button>
       </nav>
+      <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
     </header>
 
-    <main>
+    <main id="main-content">
       <!-- ==============================
            HERO SECTION
       ============================== -->
-      <section class="hero-section">
-        <div class="hero-overlay"></div>
+      <section class="hero-section" id="hero">
+        <div class="hero-backdrop" aria-hidden="true">
+          <img
+            src="assets/images/about.jpg"
+            alt=""
+            class="hero-backdrop-img"
+            id="hero-parallax-img"
+          />
+          <div class="hero-scrim"></div>
+          <div class="hero-glow"></div>
+          <div class="hero-grain"></div>
+        </div>
 
-        <div class="hero-content container">
-          <div class="hero-text">
-            <span class="hero-badge">
-              <span class="badge-dot"></span>
-              THE PRIDE OF INDONESIA
-            </span>
+        <div class="hero-coordinates" aria-hidden="true">
+          <span>6.2186° S, 106.8026° E</span>
+          <span class="coord-divider"></span>
+          <span>SUPPORTER EDITION</span>
+        </div>
 
-            <h1>
-              ONE NATION.
-              <span>ONE PASSION.</span>
-              ONE GARUDA.
-            </h1>
-
-            <p>
-              Bukan sekadar sepak bola, ini tentang kebanggaan, perjuangan, dan
-              semangat jutaan rakyat Indonesia. Bersama Garuda, kita melangkah
-              menuju sejarah.
-            </p>
-
-            <div class="hero-buttons">
-              <a href="#players" class="btn btn-primary">
-                Explore The Squad
-                <span>→</span>
-              </a>
-
-              <a href="#about" class="btn btn-outline"> Discover More </a>
-            </div>
-
-            <div class="hero-stats">
-              <div class="stat-item">
-                <h3>IND</h3>
-                <p>National Team</p>
+        <div class="hero-container container">
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <div class="hero-eyebrow hero-animate">
+                <span class="pulse-dot" aria-hidden="true"></span>
+                <span>INDONESIAN NATIONAL FOOTBALL TEAM</span>
               </div>
 
-              <div class="stat-divider"></div>
+              <h1 class="hero-title hero-animate">
+                <span class="title-line">ONE NATION.</span>
+                <span class="title-line title-line--accent">ONE PASSION.</span>
+                <span class="title-line">ONE GARUDA.</span>
+              </h1>
 
-              <div class="stat-item">
-                <h3>GARUDA</h3>
-                <p>Our Identity</p>
-              </div>
+              <p class="hero-lead hero-animate">
+                More than ninety minutes on the pitch. Garuda Fans is a digital home
+                crafted for supporters who carry Indonesian football with pride,
+                devotion, and an unbroken voice.
+              </p>
 
-              <div class="stat-divider"></div>
-
-              <div class="stat-item">
-                <h3>ONE</h3>
-                <p>United Nation</p>
+              <div class="hero-actions hero-animate">
+                <a href="#players" class="btn btn-primary">
+                  <span>Explore The Squad</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
+                </a>
+                <a href="#about" class="btn btn-ghost">
+                  <span>The Spirit of Garuda</span>
+                </a>
               </div>
             </div>
+
+            <aside class="hero-editorial-card hero-animate" aria-label="Featured Supporter Frame">
+              <div class="editorial-card-media">
+                <img
+                  src="assets/images/about.jpg"
+                  alt="Garuda tifo banner raised by Indonesian supporters inside the stadium"
+                />
+                <span class="editorial-tag">STADIUM ATMOSPHERE</span>
+              </div>
+              <div class="editorial-card-meta">
+                <div class="meta-cell">
+                  <span class="meta-label">IDENTITY</span>
+                  <strong class="meta-value">TIMNAS INDONESIA</strong>
+                </div>
+                <div class="meta-cell">
+                  <span class="meta-label">COLORS</span>
+                  <strong class="meta-value">MERAH PUTIH</strong>
+                </div>
+              </div>
+            </aside>
           </div>
 
-          <div class="hero-visual">
-            <img
-              src="assets/images/about.jpg"
-              alt="Suporter Timnas Indonesia mendukung Garuda"
-            />
-
-            <div class="hero-image-caption">
-              <span>THE SPIRIT OF</span>
-              <h3>INDONESIA</h3>
+          <div class="hero-bottom-bar hero-animate">
+            <div class="hero-scroll-cue">
+              <span class="scroll-line" aria-hidden="true"></span>
+              <span>SCROLL TO EXPLORE</span>
+            </div>
+            <div class="hero-manifesto-line">
+              <span>SUPPORTERS DIGITAL HOME</span>
+              <span aria-hidden="true">•</span>
+              <span>NO BACKEND DEMO EDITION</span>
             </div>
           </div>
         </div>
 
-        <div class="hero-bottom">
-          <span>GARUDA FANS</span>
-          <span>SUPPORT WITH PRIDE. FIGHT WITH HEART.</span>
+        <!-- Kinetic Editorial Ticker -->
+        <div class="marquee-band" aria-hidden="true">
+          <div class="marquee-track">
+            <span>GARUDA FANS</span>
+            <span class="marquee-sep">✦</span>
+            <span>ONE NATION</span>
+            <span class="marquee-sep">✦</span>
+            <span>INDONESIAN FOOTBALL IDENTITY</span>
+            <span class="marquee-sep">✦</span>
+            <span>PRIDE • UNITY • PASSION</span>
+            <span class="marquee-sep">✦</span>
+            <span>GARUDA FANS</span>
+            <span class="marquee-sep">✦</span>
+            <span>ONE NATION</span>
+            <span class="marquee-sep">✦</span>
+            <span>INDONESIAN FOOTBALL IDENTITY</span>
+            <span class="marquee-sep">✦</span>
+            <span>PRIDE • UNITY • PASSION</span>
+            <span class="marquee-sep">✦</span>
+          </div>
         </div>
       </section>
 
       <!-- ==============================
-           ABOUT SECTION
+           ABOUT — THE SPIRIT OF GARUDA
       ============================== -->
-      <section class="about-section" id="about">
+      <section class="about-section section-pad" id="about">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-label">WHO WE ARE</span>
+          <header class="editorial-header reveal-up">
+            <span class="section-index">01 / THE SPIRIT OF GARUDA</span>
+            <h2 class="display-heading">
+              MORE THAN <span class="text-outline">NINETY</span>
+              <span class="text-crimson">MINUTES.</span>
+            </h2>
+          </header>
 
-            <h2>MORE THAN <span>FOOTBALL.</span></h2>
+          <div class="about-spread">
+            <div class="about-visual-cluster reveal-up">
+              <figure class="about-primary-frame">
+                <img
+                  src="assets/images/about.jpg"
+                  alt="Supporters displaying a giant Garuda tifo banner in the stadium"
+                  loading="lazy"
+                />
+                <figcaption>
+                  <span>CURVA &amp; TRIBUNE</span>
+                  <strong>INDONESIA SUPPORTERS</strong>
+                </figcaption>
+              </figure>
 
-            <p>
-              Garuda Fans adalah ruang bagi para pendukung Timnas Indonesia
-              untuk mengenal skuad, mengikuti perjalanan tim, dan merayakan
-              semangat sepak bola Indonesia.
-            </p>
+              <figure class="about-secondary-frame">
+                <img
+                  src="assets/images/Rizky Ridho.jpeg"
+                  alt="Indonesian National Team player Rizky Ridho on the pitch"
+                  loading="lazy"
+                />
+                <figcaption>ON THE PITCH • #05</figcaption>
+              </figure>
+            </div>
+
+            <div class="about-narrative reveal-up">
+              <span class="mono-kicker">OUR PURPOSE &amp; CONNECTION</span>
+              <h3>Where the terrace roar meets the badge on the chest.</h3>
+              <p>
+                Across islands, languages, and generations, the Indonesian National
+                Football Team turns millions of individual hopes into a single
+                collective heartbeat. Every matchday begins long before kickoff—in
+                the chants, the red shirts, and the shared belief that Garuda
+                belongs on the grandest stages.
+              </p>
+              <p>
+                Garuda Fans exists as a supporter-built digital archive: an
+                editorial space to know the squad, track upcoming matchday status,
+                and leave words of encouragement for the team.
+              </p>
+
+              <div class="about-pillars">
+                <article class="pillar-row">
+                  <span class="pillar-num">01</span>
+                  <div class="pillar-body">
+                    <h4>PRIDE</h4>
+                    <p>Honoring the red-and-white crest in victory, adversity, and transition.</p>
+                  </div>
+                </article>
+                <article class="pillar-row">
+                  <span class="pillar-num">02</span>
+                  <div class="pillar-body">
+                    <h4>UNITY</h4>
+                    <p>One supporter voice linking every corner of the archipelago.</p>
+                  </div>
+                </article>
+                <article class="pillar-row">
+                  <span class="pillar-num">03</span>
+                  <div class="pillar-body">
+                    <h4>PASSION</h4>
+                    <p>Unwavering energy from the first whistle to stoppage time.</p>
+                  </div>
+                </article>
+              </div>
+
+              <a href="#players" class="editorial-link">
+                <span>Proceed to The Squad</span>
+                <span class="link-arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
 
-          <div class="about-content">
-            <div class="about-image">
+          <!-- Technical Leadership Spotlight -->
+          <aside class="coach-spotlight reveal-up" aria-label="Technical Leadership">
+            <div class="coach-portrait">
               <img
-                src="assets/images/about.jpg"
-                alt="Semangat pendukung Timnas Indonesia"
+                src="assets/images/John Herdman.jpeg"
+                alt="Portrait of Head Coach John Herdman"
+                loading="lazy"
               />
-
-              <div class="image-tag">
-                <span>EST.</span>
-                <strong>INDONESIA</strong>
+            </div>
+            <div class="coach-info">
+              <span class="mono-kicker">TECHNICAL LEADERSHIP</span>
+              <h3>John Herdman</h3>
+              <p>
+                Head Coach portrait included in the Garuda Fans visual archive.
+                Official tactical records, tenure dates, and verified coaching
+                statistics are marked as placeholders until updated with official
+                federation releases.
+              </p>
+              <div class="coach-meta">
+                <div>
+                  <span>ROLE</span>
+                  <strong>Head Coach</strong>
+                </div>
+                <div>
+                  <span>OFFICIAL RECORD</span>
+                  <strong>TBA / Placeholder</strong>
+                </div>
               </div>
             </div>
-
-            <div class="about-text">
-              <span class="content-label">OUR PASSION</span>
-
-              <h3>One Team.<br />Millions of Dreams.</h3>
-
-              <p>
-                Sepak bola menyatukan kita tanpa memandang perbedaan. Setiap
-                pertandingan membawa harapan, setiap perjuangan menciptakan
-                kebanggaan, dan setiap dukungan menjadi bagian dari perjalanan
-                Garuda.
-              </p>
-
-              <p>
-                Melalui Garuda Fans, kami ingin menghadirkan informasi seputar
-                Timnas Indonesia dalam satu tempat yang mudah diakses oleh
-                seluruh penggemar.
-              </p>
-
-              <a href="#players" class="text-link">
-                Meet The Squad <span>→</span>
-              </a>
-            </div>
-          </div>
-
-          <div class="about-values">
-            <div class="value-card">
-              <span class="value-number">01</span>
-              <h3>PRIDE</h3>
-              <p>Bangga menjadi bagian dari sepak bola Indonesia.</p>
-            </div>
-
-            <div class="value-card">
-              <span class="value-number">02</span>
-              <h3>UNITY</h3>
-              <p>Bersatu memberikan dukungan untuk satu lambang Garuda.</p>
-            </div>
-
-            <div class="value-card">
-              <span class="value-number">03</span>
-              <h3>PASSION</h3>
-              <p>Menjaga semangat dan kecintaan terhadap Timnas Indonesia.</p>
-            </div>
-          </div>
+          </aside>
         </div>
       </section>
 
       <!-- ==============================
-           PLAYERS SECTION
+           SQUAD — MEET THE PLAYERS
       ============================== -->
-      <section class="players-section" id="players">
+      <section class="players-section section-pad" id="players">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-label">MEET THE TEAM</span>
+          <div class="squad-top-row reveal-up">
+            <div>
+              <span class="section-index">02 / THE GARUDA SQUAD</span>
+              <h2 class="display-heading">
+                MEET THE <span class="text-crimson">PLAYERS.</span>
+              </h2>
+            </div>
 
-            <h2>THE GARUDA <span>SQUAD.</span></h2>
-
-            <p>
-              Get to know the players who represent Indonesia and carry the
-              Garuda emblem with pride.
-            </p>
+            <div class="squad-meta-controls">
+              <p class="squad-lead">
+                Explore the squad portrait archive. Filter by role, inspect
+                player details, or open a dedicated full-screen dossier.
+              </p>
+              <div class="squad-utility-bar">
+                <span class="squad-counter" id="squad-counter" aria-live="polite">
+                  Showing 18 Players
+                </span>
+                <div class="view-switcher" role="group" aria-label="Gallery layout mode">
+                  <button
+                    type="button"
+                    class="view-btn active"
+                    data-view="rail"
+                    aria-pressed="true"
+                  >
+                    Editorial Rail
+                  </button>
+                  <button
+                    type="button"
+                    class="view-btn"
+                    data-view="grid"
+                    aria-pressed="false"
+                  >
+                    Full Grid
+                  </button>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- Player Category Filter -->
-          <div class="player-categories">
-            <button
-              class="category-btn active"
-              type="button"
-              data-category="all"
-            >
-              All Players
+          <!-- Position Filters -->
+          <div
+            class="player-categories reveal-up"
+            role="tablist"
+            aria-label="Filter players by position"
+          >
+            <button class="category-btn active" type="button" data-category="all">
+              All Squad
             </button>
-
-            <button
-              class="category-btn"
-              type="button"
-              data-category="goalkeeper"
-            >
+            <button class="category-btn" type="button" data-category="goalkeeper">
               Goalkeepers
             </button>
-
             <button class="category-btn" type="button" data-category="defender">
               Defenders
             </button>
-
-            <button
-              class="category-btn"
-              type="button"
-              data-category="midfielder"
-            >
+            <button class="category-btn" type="button" data-category="midfielder">
               Midfielders
             </button>
-
             <button class="category-btn" type="button" data-category="forward">
               Forwards
             </button>
           </div>
 
-          <!-- Horizontal Player Gallery -->
-          <div class="players-gallery">
-            <!-- Player 1 -->
-            <article
-              class="player-card"
-              data-category="defender"
-              data-player="jay-idzes"
-            >
-              <button
-                class="player-card-btn"
-                type="button"
-                data-player="jay-idzes"
-                aria-label="View Jay Idzes profile"
-              >
-                <div class="player-image">
-                  <img
-                    src="assets/images/players/jay-idzes.jpg"
-                    alt="Jay Idzes"
-                    loading="lazy"
-                  />
-
-                  <span class="player-number">03</span>
-                  <span class="view-player">VIEW PROFILE ↗</span>
-                </div>
-
-                <div class="player-info">
-                  <span class="player-position">DEFENDER</span>
-                  <h3>Jay Idzes</h3>
-                  <p>Indonesia National Team</p>
-                </div>
-              </button>
-            </article>
-
-            <!-- Player 2 -->
-            <article
-              class="player-card"
-              data-category="defender"
-              data-player="rizky-ridho"
-            >
-              <button
-                class="player-card-btn"
-                type="button"
-                data-player="rizky-ridho"
-                aria-label="View Rizky Ridho profile"
-              >
-                <div class="player-image">
-                  <img
-                    src="assets/images/players/rizky-ridho.jpg"
-                    alt="Rizky Ridho"
-                    loading="lazy"
-                  />
-
-                  <span class="player-number">05</span>
-                  <span class="view-player">VIEW PROFILE ↗</span>
-                </div>
-
-                <div class="player-info">
-                  <span class="player-position">DEFENDER</span>
-                  <h3>Rizky Ridho</h3>
-                  <p>Indonesia National Team</p>
-                </div>
-              </button>
-            </article>
-
-            <!-- Player 3 -->
-            <article
-              class="player-card"
-              data-category="midfielder"
-              data-player="marselino"
-            >
-              <button
-                class="player-card-btn"
-                type="button"
-                data-player="marselino"
-                aria-label="View Marselino Ferdinan profile"
-              >
-                <div class="player-image">
-                  <img
-                    src="assets/images/players/marselino.jpg"
-                    alt="Marselino Ferdinan"
-                    loading="lazy"
-                  />
-
-                  <span class="player-number">07</span>
-                  <span class="view-player">VIEW PROFILE ↗</span>
-                </div>
-
-                <div class="player-info">
-                  <span class="player-position">MIDFIELDER</span>
-                  <h3>Marselino Ferdinan</h3>
-                  <p>Indonesia National Team</p>
-                </div>
-              </button>
-            </article>
+          <!-- Dynamic Player Gallery -->
+          <div
+            class="players-gallery"
+            id="players-gallery"
+            aria-live="polite"
+            data-view="rail"
+          >
+            <!-- Rendered dynamically from SQUAD_DATA in js/script.js -->
+            <noscript>
+              <p class="noscript-note">
+                JavaScript is required to load the interactive squad gallery and
+                position filters.
+              </p>
+            </noscript>
           </div>
 
-          <!-- Gallery Navigation -->
-          <div class="gallery-footer">
-            <p>SCROLL TO EXPLORE THE SQUAD</p>
-
+          <!-- Gallery Rail Controls -->
+          <div class="gallery-footer" id="gallery-footer">
+            <div class="rail-progress-wrap" aria-hidden="true">
+              <div class="rail-progress-bar" id="rail-progress-bar"></div>
+            </div>
             <div class="gallery-controls">
-              <button
-                class="gallery-arrow"
-                id="players-prev"
-                type="button"
-                aria-label="Previous players"
-              >
-                ←
-              </button>
-
-              <button
-                class="gallery-arrow"
-                id="players-next"
-                type="button"
-                aria-label="Next players"
-              >
-                →
-              </button>
-            </div>
-          </div>
-
-          <!-- Player Detail Modal -->
-          <div class="player-modal" id="player-modal" aria-hidden="true">
-            <div class="modal-overlay" data-close-modal></div>
-
-            <div
-              class="modal-content"
-              role="dialog"
-              aria-modal="true"
-              aria-labelledby="modal-player-name"
-            >
-              <button
-                class="modal-close"
-                type="button"
-                data-close-modal
-                aria-label="Close player details"
-              >
-                ×
-              </button>
-
-              <div class="modal-player-image">
-                <img id="modal-player-image" src="" alt="" />
-              </div>
-
-              <div class="modal-player-info">
-                <span class="player-position" id="modal-player-position">
-                  PLAYER POSITION
-                </span>
-
-                <h2 id="modal-player-name">Player Name</h2>
-
-                <p id="modal-player-description">
-                  Player information will appear here.
-                </p>
-
-                <div class="modal-player-stats">
-                  <div>
-                    <span>NUMBER</span>
-                    <strong id="modal-player-number">00</strong>
-                  </div>
-
-                  <div>
-                    <span>POSITION</span>
-                    <strong id="modal-player-role">-</strong>
-                  </div>
-
-                  <div>
-                    <span>NATIONALITY</span>
-                    <strong>Indonesia</strong>
-                  </div>
-                </div>
+              <span class="rail-hint">DRAG OR USE CONTROLS</span>
+              <div class="arrow-pair">
+                <button
+                  class="gallery-arrow"
+                  id="players-prev"
+                  type="button"
+                  aria-label="Scroll to previous players"
+                >
+                  ←
+                </button>
+                <button
+                  class="gallery-arrow"
+                  id="players-next"
+                  type="button"
+                  aria-label="Scroll to next players"
+                >
+                  →
+                </button>
               </div>
             </div>
           </div>
@@ -424,210 +405,147 @@
       </section>
 
       <!-- ==============================
-           MATCH SCHEDULE
+           MATCHDAY — SCHEDULE & RESULTS
       ============================== -->
-      <section class="schedule-section" id="schedule">
+      <section class="schedule-section section-pad" id="schedule">
         <div class="container">
-          <div class="section-heading">
-            <span class="section-label">MATCH CENTER</span>
-
-            <h2>UPCOMING <span>FIXTURES.</span></h2>
-
-            <p>
-              Follow the journey of the Indonesian National Team through every
-              match and competition.
-            </p>
-          </div>
-
-          <!-- Match Filter -->
-          <div class="match-filter">
-            <button
-              class="match-filter-btn active"
-              type="button"
-              data-filter="all"
-            >
-              All Matches
-            </button>
-
-            <button
-              class="match-filter-btn"
-              type="button"
-              data-filter="upcoming"
-            >
-              Upcoming
-            </button>
-
-            <button
-              class="match-filter-btn"
-              type="button"
-              data-filter="finished"
-            >
-              Finished
-            </button>
-          </div>
-
-          <!-- Match List -->
-          <div class="match-list">
-            <!-- Match 1 -->
-            <article class="match-card" data-status="upcoming">
-              <div class="match-header">
-                <span class="match-competition"> INTERNATIONAL FRIENDLY </span>
-
-                <span class="match-status upcoming">UPCOMING</span>
-              </div>
-
-              <div class="match-content">
-                <div class="match-team">
-                  <span class="team-flag">🇮🇩</span>
-                  <h3>INDONESIA</h3>
-                </div>
-
-                <div class="match-details">
-                  <span class="match-date">TBA</span>
-                  <strong>VS</strong>
-                  <span class="match-time">TBA</span>
-                </div>
-
-                <div class="match-team">
-                  <span class="team-flag">🌏</span>
-                  <h3>OPPONENT</h3>
-                </div>
-              </div>
-
-              <div class="match-footer">
-                <span>Venue: To be announced</span>
-                <span class="match-id">MATCH 01</span>
-              </div>
-            </article>
-
-            <!-- Match 2 -->
-            <article class="match-card" data-status="upcoming">
-              <div class="match-header">
-                <span class="match-competition">
-                  INTERNATIONAL COMPETITION
-                </span>
-
-                <span class="match-status upcoming">UPCOMING</span>
-              </div>
-
-              <div class="match-content">
-                <div class="match-team">
-                  <span class="team-flag">🇮🇩</span>
-                  <h3>INDONESIA</h3>
-                </div>
-
-                <div class="match-details">
-                  <span class="match-date">TBA</span>
-                  <strong>VS</strong>
-                  <span class="match-time">TBA</span>
-                </div>
-
-                <div class="match-team">
-                  <span class="team-flag">🌏</span>
-                  <h3>OPPONENT</h3>
-                </div>
-              </div>
-
-              <div class="match-footer">
-                <span>Venue: To be announced</span>
-                <span class="match-id">MATCH 02</span>
-              </div>
-            </article>
-          </div>
-
-          <div class="schedule-note">
-            <p>
-              Match dates and details will be updated when official information
-              is available.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <!-- ==============================
-           FAN SUPPORT SECTION
-      ============================== -->
-      <section class="support-section" id="favorite-form">
-        <div class="container">
-          <div class="support-wrapper">
-            <!-- Support Information -->
-            <div class="support-info">
-              <span class="section-label">SHOW YOUR SUPPORT</span>
-
-              <h2>
-                YOUR VOICE.<br />
-                <span>OUR STRENGTH.</span>
+          <div class="matchday-header reveal-up">
+            <div>
+              <span class="section-index">03 / MATCHDAY CENTER</span>
+              <h2 class="display-heading">
+                FIXTURES &amp; <span class="text-crimson">RESULTS.</span>
               </h2>
+            </div>
 
-              <p>
-                Every supporter is part of the journey. Choose your favorite
-                player and send your message of encouragement to the Garuda
+            <div class="broadcast-badge">
+              <span class="broadcast-dot" aria-hidden="true"></span>
+              <span>OFFICIAL SCHEDULE STATUS: TBA</span>
+            </div>
+          </div>
+
+          <div class="match-toolbar reveal-up">
+            <div class="match-filter" role="group" aria-label="Filter matches by status">
+              <button class="match-filter-btn active" type="button" data-filter="all">
+                All Matches
+              </button>
+              <button class="match-filter-btn" type="button" data-filter="upcoming">
+                Upcoming
+              </button>
+              <button class="match-filter-btn" type="button" data-filter="finished">
+                Finished
+              </button>
+            </div>
+            <p class="match-count" id="match-count" aria-live="polite">
+              Showing 2 Scheduled Placeholders
+            </p>
+          </div>
+
+          <div class="match-list" id="match-list">
+            <!-- Rendered dynamically from MATCH_DATA in js/script.js -->
+          </div>
+
+          <div class="schedule-note reveal-up">
+            <img src="assets/icons/pitch.svg" alt="" width="20" height="20" />
+            <p>
+              Transparency Notice: No unverified dates, scores, or opponents are
+              displayed. All fixtures remain marked <strong>TBA</strong> until
+              confirmed by official match schedules.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==============================
+           SUPPORT — BE PART OF THE ROAR
+      ============================== -->
+      <section class="support-section section-pad" id="favorite-form">
+        <div class="container">
+          <div class="support-grid">
+            <div class="support-editorial reveal-up">
+              <span class="section-index">04 / SUPPORTER VOICE</span>
+              <h2 class="display-heading">
+                BE PART OF <span class="text-crimson">THE ROAR.</span>
+              </h2>
+              <p class="support-lead">
+                Every chant from the stands echoes onto the pitch. Select your
+                favorite Garuda player and leave a message of support for the
                 squad.
               </p>
 
-              <div class="support-highlight">
-                <span class="highlight-icon">🇮🇩</span>
-
-                <div>
-                  <h3>ONE NATION, ONE TEAM</h3>
-                  <p>United in passion. United in pride.</p>
-                </div>
+              <div class="support-wall-header">
+                <span class="mono-kicker">SESSION SUPPORTER WALL</span>
+                <span class="wall-badge" id="wall-count">0 Messages</span>
+              </div>
+              <div class="support-wall" id="support-wall" aria-live="polite">
+                <p class="wall-empty" id="wall-empty">
+                  No messages posted in this session yet. Be the first supporter to
+                  send a roar.
+                </p>
               </div>
             </div>
 
-            <!-- Support Form -->
-            <div class="support-form-container">
-              <form id="support-form" class="support-form">
-                <div class="form-heading">
-                  <span>FAN MESSAGE</span>
+            <div class="support-form-panel reveal-up">
+              <form id="support-form" class="support-form" novalidate>
+                <div class="form-top">
+                  <span class="mono-kicker">FRONTEND DEMO FORM</span>
                   <h3>Send Your Support</h3>
                 </div>
 
                 <div class="form-group">
-                  <label for="fan-name">Your Name</label>
-
+                  <label for="fan-name">Supporter Name</label>
                   <input
                     type="text"
                     id="fan-name"
                     name="name"
-                    placeholder="Enter your name"
+                    placeholder="e.g. Ibrahim"
+                    autocomplete="name"
+                    maxlength="60"
                     required
                   />
+                  <span class="field-error" id="error-name" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
-                  <label for="favorite-player">Favorite Player</label>
-
+                  <label for="favorite-player">Favorite Squad Player</label>
                   <select id="favorite-player" name="favoritePlayer" required>
-                    <option value="">Select your favorite player</option>
-                    <option value="Jay Idzes">Jay Idzes</option>
-                    <option value="Rizky Ridho">Rizky Ridho</option>
-                    <option value="Marselino Ferdinan">
-                      Marselino Ferdinan
-                    </option>
+                    <option value="">Select a player from the squad</option>
+                    <!-- Populated dynamically from SQUAD_DATA -->
                   </select>
+                  <span class="field-error" id="error-player" aria-live="polite"></span>
                 </div>
 
                 <div class="form-group">
-                  <label for="support-message">Your Message</label>
-
+                  <div class="label-row">
+                    <label for="support-message">Your Message</label>
+                    <span class="char-count" id="char-count">0 / 240</span>
+                  </div>
                   <textarea
                     id="support-message"
                     name="supportMessage"
-                    rows="5"
-                    placeholder="Write your support message..."
+                    rows="4"
+                    maxlength="240"
+                    placeholder="Write your encouragement for the Garuda squad..."
                     required
                   ></textarea>
+                  <span class="field-error" id="error-message" aria-live="polite"></span>
                 </div>
 
-                <button type="submit" class="btn btn-primary">
-                  SEND SUPPORT MESSAGE
-                  <span>→</span>
+                <div
+                  class="form-feedback"
+                  id="form-feedback"
+                  role="status"
+                  aria-live="polite"
+                ></div>
+
+                <button type="submit" class="btn btn-primary btn-full">
+                  <span>Send Support Message</span>
+                  <span class="btn-arrow" aria-hidden="true">→</span>
                 </button>
 
                 <p class="form-disclaimer">
-                  Your message will be received as a show of support for the
-                  Garuda squad.
+                  <strong>Frontend Demonstration Only:</strong> This website has no
+                  backend server. Your message is validated locally and displayed on
+                  the Session Supporter Wall without transmitting data externally.
                 </p>
               </form>
             </div>
@@ -637,88 +555,182 @@
     </main>
 
     <!-- ==============================
+         PLAYER DETAIL MODAL
+    ============================== -->
+    <div class="player-modal" id="player-modal" aria-hidden="true">
+      <div class="modal-overlay" data-close-modal></div>
+
+      <div
+        class="modal-content"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="modal-player-name"
+      >
+        <button
+          class="modal-close"
+          type="button"
+          data-close-modal
+          aria-label="Close player details"
+        >
+          ×
+        </button>
+
+        <div class="modal-media">
+          <img id="modal-player-image" src="" alt="" />
+          <span class="modal-number-bg" id="modal-number-bg">00</span>
+        </div>
+
+        <div class="modal-body">
+          <span class="mono-kicker" id="modal-player-position">POSITION</span>
+          <h2 id="modal-player-name">Player Name</h2>
+          <p class="modal-bio" id="modal-player-description">
+            Player details appear here.
+          </p>
+
+          <dl class="modal-specs">
+            <div class="spec-item">
+              <dt>SQUAD NO.</dt>
+              <dd id="modal-player-number">TBA</dd>
+            </div>
+            <div class="spec-item">
+              <dt>POSITION</dt>
+              <dd id="modal-player-role">-</dd>
+            </div>
+            <div class="spec-item">
+              <dt>NATIONALITY</dt>
+              <dd>Indonesia</dd>
+            </div>
+            <div class="spec-item">
+              <dt>OFFICIAL STATS</dt>
+              <dd id="modal-player-stats-note">Placeholder (TBA)</dd>
+            </div>
+          </dl>
+
+          <div class="modal-actions">
+            <div class="modal-nav-pair">
+              <button
+                type="button"
+                class="btn btn-ghost btn-sm"
+                id="modal-prev-player"
+              >
+                ← Prev Player
+              </button>
+              <button
+                type="button"
+                class="btn btn-ghost btn-sm"
+                id="modal-next-player"
+              >
+                Next Player →
+              </button>
+            </div>
+
+            <a href="profile.html" class="btn btn-primary btn-sm" id="modal-profile-link">
+              <span>Full Dossier</span>
+              <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==============================
          FOOTER
     ============================== -->
     <footer class="site-footer">
       <div class="container">
-        <div class="footer-main">
-          <!-- Brand -->
+        <div class="footer-top">
           <div class="footer-brand">
-            <a href="index.html" class="logo"> GARUDA<span>FANS</span> </a>
-
+            <a href="#top" class="logo">
+              <img
+                src="assets/icons/garuda-crest.svg"
+                alt=""
+                class="logo-mark"
+                width="28"
+                height="28"
+              />
+              <span class="logo-text">GARUDA<span>FANS</span></span>
+            </a>
             <p>
-              A fan-made platform dedicated to the pride, passion, and journey
-              of the Indonesian National Football Team.
+              An editorial supporter platform dedicated to the Indonesian National
+              Football Team. Built as a Final Project for Study Club Frontend Basic
+              at KSM VeteranTech UPNVJ.
             </p>
-
-            <span class="footer-tagline">
-              SUPPORT WITH PRIDE. FIGHT WITH HEART.
-            </span>
           </div>
 
-          <!-- Quick Links -->
-          <div class="footer-links">
-            <h3>QUICK LINKS</h3>
-
-            <a href="index.html">Home</a>
-            <a href="#about">About</a>
-            <a href="#players">Players</a>
-            <a href="#schedule">Matches</a>
-            <a href="#favorite-form">Fan Support</a>
+          <div class="footer-col">
+            <h3>NAVIGATION</h3>
+            <ul>
+              <li><a href="#hero">Home</a></li>
+              <li><a href="#about">The Spirit</a></li>
+              <li><a href="#players">Squad</a></li>
+              <li><a href="#schedule">Matchday</a></li>
+              <li><a href="#favorite-form">Supporter Voice</a></li>
+              <li><a href="profile.html">Creator &amp; Dossier Profile</a></li>
+            </ul>
           </div>
 
-          <!-- Creator Social Media -->
-          <div class="footer-social">
-            <h3>CONNECT WITH ME</h3>
-
-            <p>Designed and developed by the creator of Garuda Fans.</p>
-
-            <div class="social-list">
-              <a
-                href="https://instagram.com/USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-              >
-                <span>IG</span>
-                Instagram
-                <span class="social-arrow">↗</span>
-              </a>
-
-              <a
-                href="https://github.com/USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-              >
-                <span>GH</span>
-                GitHub
-                <span class="social-arrow">↗</span>
-              </a>
-
-              <a
-                href="https://linkedin.com/in/USERNAME"
-                target="_blank"
-                rel="noopener noreferrer"
-                class="social-link"
-              >
-                <span>IN</span>
-                LinkedIn
-                <span class="social-arrow">↗</span>
-              </a>
-            </div>
+          <div class="footer-col">
+            <h3>SOCIAL PLACEHOLDERS</h3>
+            <p class="footer-placeholder-note">
+              External links below are placeholders for the project owner to fill
+              in.
+            </p>
+            <ul class="social-placeholders">
+              <li>
+                <a
+                  href="#social-instagram-placeholder"
+                  class="social-link"
+                  data-placeholder-link="Instagram"
+                >
+                  <span>Instagram [Placeholder URL]</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#social-github-placeholder"
+                  class="social-link"
+                  data-placeholder-link="GitHub"
+                >
+                  <span>GitHub [Placeholder URL]</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#social-linkedin-placeholder"
+                  class="social-link"
+                  data-placeholder-link="LinkedIn"
+                >
+                  <span>LinkedIn [Placeholder URL]</span>
+                  <span aria-hidden="true">↗</span>
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        <!-- Footer Bottom -->
+        <div class="footer-giant-wordmark" aria-hidden="true">GARUDA FANS</div>
+
         <div class="footer-bottom">
-          <p>© 2026 GARUDA FANS. ALL RIGHTS RESERVED.</p>
-          <p>MADE WITH PASSION FOR INDONESIAN FOOTBALL 🇮🇩</p>
+          <p>© 2026 GARUDA FANS • IBRAHIM APRI FALAH • UPN "VETERAN" JAKARTA</p>
+          <button type="button" class="back-to-top" id="back-to-top">
+            <span>BACK TO TOP</span>
+            <span aria-hidden="true">↑</span>
+          </button>
         </div>
       </div>
     </footer>
 
-    <!-- MAIN JAVASCRIPT -->
-    <script src="js/script.js"></script>
+    <!-- GSAP + ScrollTrigger CDN (with graceful fallback in js/script.js) -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="js/script.js" defer></script>
   </body>
 </html>
