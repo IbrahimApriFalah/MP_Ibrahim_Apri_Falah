@@ -10,7 +10,7 @@
 
 /* ==============================
    1. STRUCTURED SQUAD & MATCH DATA
-   (Strictly uses verified workspace assets & honest placeholders)
+   (Uses dated, sourced training-camp and match records; unverified details are not invented)
 ============================== */
 
 const POSITION_LABELS = {
@@ -22,212 +22,306 @@ const POSITION_LABELS = {
 
 const SQUAD_DATA = [
   {
-    id: "emil-audero",
-    name: "Emil Audero",
-    number: "01",
-    position: "goalkeeper",
-    image: "assets/images/Emil Audero.jpeg",
-    shortNote: "Goalkeeper • Kit #01",
-    bio: "Indonesian National Team goalkeeper portrait from the Garuda Fans archive. Official career caps, clean-sheet records, and match biography remain placeholders until verified against official PSSI records.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "maarten-paes",
-    name: "Maarten Paes",
-    number: "TBA",
-    position: "goalkeeper",
-    image: "assets/images/Maarten Paes.jpeg",
-    shortNote: "Goalkeeper • Number TBA",
-    bio: "Indonesian National Team goalkeeper portrait from the Garuda Fans archive. Jersey number not visible in this crop; career statistics and biography are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "nadeo-arga-winata",
-    name: "Nadeo Arga Winata",
-    number: "12",
-    position: "goalkeeper",
-    image: "assets/images/Nadeo Arga Winata - U23.jpeg",
-    shortNote: "Goalkeeper • Kit #12",
-    bio: "Indonesian National Team goalkeeper portrait from the Garuda Fans archive. Detailed match appearances and statistics are placeholders awaiting official updates.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "rizky-ridho",
-    name: "Rizky Ridho",
-    number: "05",
-    position: "defender",
-    image: "assets/images/Rizky Ridho.jpeg",
-    shortNote: "Defender • Kit #05",
-    bio: "Indonesian National Team defender portrait wearing shirt #05. Official international caps and club statistics are marked as placeholders until verified.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "kevin-diks",
-    name: "Kevin Diks",
-    number: "02",
-    position: "defender",
-    image: "assets/images/Kevin Diks.jpeg",
-    shortNote: "Defender • Kit #02",
-    bio: "Indonesian National Team defender portrait wearing shirt #02. Detailed match history and player statistics are placeholders awaiting official confirmation.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "justin-hubner",
-    name: "Justin Hubner",
+    id: "nadeo-argawinata",
+    name: "Nadeo Argawinata",
     number: "23",
-    position: "defender",
-    image: "assets/images/Justin hubner.jpeg",
-    shortNote: "Defender • Kit #23",
-    bio: "Indonesian National Team defender portrait wearing shirt #23. Official international match statistics are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
+    position: "goalkeeper",
+    club: "Persija Jakarta",
+    image: "assets/images/Nadeo Arga Winata - U23.jpeg",
+    shortNote: "Goalkeeper • Persija Jakarta (Nov 2026 call-up)",
+    bio: "Nadeo Argawinata was named in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 23. This is the club number, not an Indonesia national-team number.",
   },
   {
-    id: "jordi-amat",
-    name: "Jordi Amat",
-    number: "TBA",
-    position: "defender",
-    image: "assets/images/Jordi Amat.jpeg",
-    shortNote: "Defender • Number TBA",
-    bio: "Indonesian National Team defender portrait from the squad archive. Shirt number is not visible in this frame; official career statistics remain placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
+    id: "reza-arya",
+    name: "Reza Arya",
+    number: "30",
+    position: "goalkeeper",
+    club: "Persebaya Surabaya",
+    image: "https://www.persebaya.id/thumbs/medium/uploads/player/2304/m-reza-arya-pratama-6a570b63da623.jpg",
+    shortNote: "Goalkeeper • Persebaya Surabaya (Nov 2026 call-up)",
+    bio: "Reza Arya was named in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 30. This is the club number, not an Indonesia national-team number.",
   },
   {
-    id: "dean-james",
-    name: "Dean James",
-    number: "21",
+    id: "mees-hilgers",
+    name: "Mees Hilgers",
+    number: "2",
     position: "defender",
-    image: "assets/images/Dean James.jpeg",
-    shortNote: "Defender • Kit #21",
-    bio: "Indonesian National Team defender portrait wearing shirt #21. Official career statistics and match records are placeholders awaiting verified data.",
-    statsNote: "Official stats TBA (Placeholder)",
+    club: "SC Heerenveen",
+    image: "https://img.okezone.com/content/2026/08/31/51/3239331/mees_hilgers-iRlu_large.jpg",
+    shortNote: "Defender • SC Heerenveen (Nov 2026 call-up)",
+    bio: "Mees Hilgers was named in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 2. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "alfharezzi-buffon",
+    name: "Alfharezzi Buffon",
+    number: "25",
+    position: "defender",
+    club: "Dewa United FC",
+    image: "https://img.okezone.com/content/2026/08/27/49/3238488/alfharezzi_buffon_resmi_gabung_dewa_united-V9fK_large.jpg",
+    shortNote: "Defender • Dewa United FC (Nov 2026 call-up)",
+    bio: "Alfharezzi Buffon was named in John Herdman's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 25. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "alta-ballah",
+    name: "Altariq Ballah",
+    number: "37",
+    position: "defender",
+    club: "Dewa United FC",
+    image: "https://assets.ileague.id/uploads/images/news/Alta-Ballah-Sebut-Mentalitas-Jadi-Kunci-Tahan-Persebaya-1770004586.jpg",
+    shortNote: "Defender • Dewa United FC (Nov 2026 call-up)",
+    bio: "Alta Ballah was named in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 37. This is the club number, not an Indonesia national-team number.",
   },
   {
     id: "dion-markx",
     name: "Dion Markx",
-    number: "19",
+    number: "44",
     position: "defender",
+    club: "Persita Tangerang",
     image: "assets/images/Dion Markx.jpeg",
-    shortNote: "Defender • Kit #19",
-    bio: "Indonesian National Team defender portrait wearing shirt #19. Career stats and international biography are placeholders until verified.",
-    statsNote: "Official stats TBA (Placeholder)",
+    shortNote: "Defender • Persita Tangerang (Nov 2026 call-up)",
+    bio: "Dion Markx was included in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 44. This is the club number, not an Indonesia national-team number.",
   },
   {
-    id: "elkan-baggott",
-    name: "Elkan Baggott",
-    number: "TBA",
+    id: "dony-tri-pamungkas",
+    name: "Dony Tri Pamungkas",
+    number: "77",
     position: "defender",
-    image: "assets/images/Elkan Baggot.jpeg",
-    shortNote: "Defender • Number TBA",
-    bio: "Indonesian National Team defender portrait. Jersey number is obscured in the photograph; verified match stats are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
+    club: "Persija Jakarta",
+    image: "https://cdn.persija.id/assets/uploads/media-uploader/large-dony-tri-pamungkas1754916703.jpg",
+    shortNote: "Defender • Persija Jakarta (Nov 2026 call-up)",
+    bio: "Dony Tri Pamungkas was selected for Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 77. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "noah-adnan",
+    name: "Noah Adnan",
+    number: "2",
+    position: "defender",
+    club: "Loudoun United FC",
+    image: "https://www.loudoununitedfc.com/wp-content/uploads/sites/21/2026/01/NoahAdnan-Announcement-WEB_NL.jpg?w=1024",
+    shortNote: "Defender • Loudoun United FC (Nov 2026 call-up)",
+    bio: "Noah Adnan joined the November 2026 training-camp group. Reporting on 23 November 2026 said he had not yet become an Indonesian citizen and that the naturalization process had not been submitted to the President and DPR.",
+    statsNote: "Club shirt number for the 2026/27 season: 2. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "rizky-ridho",
+    name: "Rizky Ridho",
+    number: "5",
+    position: "defender",
+    club: "Persija Jakarta",
+    image: "assets/images/Rizky Ridho.jpeg",
+    shortNote: "Defender • Persija Jakarta (Nov 2026 call-up)",
+    bio: "Rizky Ridho was part of Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 5. This is the club number, not an Indonesia national-team number.",
   },
   {
     id: "shayne-pattynama",
     name: "Shayne Pattynama",
-    number: "20",
+    number: "25",
     position: "defender",
+    club: "Persija Jakarta",
     image: "assets/images/Shayne Pattynama.jpeg",
-    shortNote: "Defender • Kit #20",
-    bio: "Indonesian National Team defender portrait wearing shirt #20. Official caps and match details are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
+    shortNote: "Defender • Persija Jakarta (Nov 2026 call-up)",
+    bio: "Shayne Pattynama was selected for Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 25. This is the club number, not an Indonesia national-team number.",
   },
   {
-    id: "calvin-verdonk",
-    name: "Calvin Verdonk",
-    number: "TBA",
-    position: "defender",
-    image: "assets/images/Calvin Verdonk.jpeg",
-    shortNote: "Defender • Number TBA",
-    bio: "Indonesian National Team defender portrait. Jersey number is covered in this image; career statistics are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "thom-haye",
-    name: "Thom Haye",
-    number: "19",
-    position: "midfielder",
-    image: "assets/images/Thom Haye.jpeg",
-    shortNote: "Midfielder • Kit #19",
-    bio: "Indonesian National Team midfielder portrait wearing shirt #19. Verified appearances and statistical records are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "joey-pelupessy",
-    name: "Joey Pelupessy",
-    number: "14",
-    position: "midfielder",
-    image: "assets/images/joey pelupessy.jpeg",
-    shortNote: "Midfielder • Kit #14",
-    bio: "Indonesian National Team midfielder portrait wearing shirt #14. Official match appearances and statistics are placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "nathan-tjoe-a-on",
-    name: "Nathan Tjoe-A-On",
+    id: "tim-geypens",
+    name: "Tim Geypens",
     number: "22",
-    position: "midfielder",
-    image: "assets/images/Nathan Tjoe-A-On.jpeg",
-    shortNote: "Midfielder • Kit #22",
-    bio: "Indonesian National Team midfielder portrait wearing shirt #22. Official international statistics and biography remain placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
+    position: "defender",
+    club: "Bali United",
+    image: "https://img.okezone.com/content/2025/01/30/51/3109021/tim_geypens-fzEW_large.jpg",
+    shortNote: "Defender • Bali United (Nov 2026 call-up)",
+    bio: "Tim Geypens was included in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 22. This is the club number, not an Indonesia national-team number.",
   },
   {
-    id: "ole-romeny",
-    name: "Ole Romeny",
+    id: "egy-maulana-vikri",
+    name: "Egy Maulana Vikri",
     number: "10",
+    position: "midfielder",
+    club: "Dewa United",
+    image: "https://img.okezone.com/content/2023/01/31/49/2756096/egy-maulana-vikri-berharap-tidak-dianakemaskan-di-dewa-united-0UeUWu3NDH.jpeg",
+    shortNote: "Midfielder • Dewa United (Nov 2026 call-up)",
+    bio: "Egy Maulana Vikri was selected for Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 10. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "ivar-jenner",
+    name: "Ivar Jenner",
+    number: "6",
+    position: "midfielder",
+    club: "Dewa United",
+    image: "https://img.okezone.com/content/2026/02/03/49/3199223/ivar_jenner_dikabarkan_gabung_dewa_united_pada_bursa_transfer_paruh_musim_super_league_2025_2026_gosballfc-TzHS_large.jpg",
+    shortNote: "Midfielder • Dewa United (Nov 2026 call-up)",
+    bio: "Ivar Jenner was included in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 6. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "rayhan-hannan",
+    name: "Rayhan Hannan",
+    number: "58",
+    position: "midfielder",
+    club: "Persija Jakarta",
+    image: "https://cdn.persija.id/assets/uploads/media-uploader/large-muhammad-rayhan-hanan1754918814.jpg",
+    shortNote: "Midfielder • Persija Jakarta (Nov 2026 call-up)",
+    bio: "Rayhan Hannan was selected for Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 58. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "taisei-marukawa",
+    name: "Taisei Marukawa",
+    number: "11",
+    position: "midfielder",
+    club: "Dewa United",
+    image: "https://thumb.tvonenews.com/images/2026/05/12/6a03387b86ebc-taisei-marukawa.jpg",
+    shortNote: "Midfielder • Dewa United (Nov 2026 call-up)",
+    bio: "Taisei Marukawa was invited to the November 2026 training camp. Reporting on 12 November described his naturalization as close to completion, but the sources cited here do not confirm that all citizenship and FIFA eligibility steps were completed by 27 November.",
+    statsNote: "Club shirt number for the 2026/27 season: 11. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "zanadin-fariz",
+    name: "Zanadin Fariz",
+    number: "8",
+    position: "midfielder",
+    club: "Persik Kediri",
+    image: "https://cloud.jpnn.com/photo/jatim/news/normal/2022/08/25/pemain-muda-persis-solo-zanadin-fariz-foto-ligaindonesiabaru-fag0.jpg",
+    shortNote: "Midfielder • Persik Kediri (Nov 2026 call-up)",
+    bio: "Zanadin Fariz was named in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 8. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "adrian-wibowo",
+    name: "Adrian Wibowo",
+    number: "7",
     position: "forward",
-    image: "assets/images/Ole Romeny.jpeg",
-    shortNote: "Forward • Kit #10",
-    bio: "Indonesian National Team forward portrait wearing shirt #10. Verified goals and international appearances are marked as placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
+    club: "FC Wacker Innsbruck",
+    image: "https://images.mlssoccer.com/image/private/t_keep-aspect-ratio-e-mobile/f_auto/mls-lafc/k0gfvzn9s869mdqjymy7.jpg",
+    shortNote: "Forward • Los Angeles FC (Nov 2026 call-up)",
+    bio: "Adrian Wibowo was included in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 7. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "arlyansyah-abdulmanan",
+    name: "Arlyansyah Abdulmanan",
+    number: "11",
+    position: "forward",
+    club: "Persija Jakarta",
+    image: "https://img.okezone.com/content/2024/02/11/51/2968507/usai-ikut-tc-timnas-indonesia-u-20-arlyansyah-abdulmanan-berharap-bisa-tembus-tim-utama-di-persija-jakarta-mJrusHWNfZ.jpg",
+    shortNote: "Forward • Persija Jakarta (Nov 2026 call-up)",
+    bio: "Arlyansyah Abdulmanan was selected for Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 11. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "jens-raven",
+    name: "Jens Raven",
+    number: "19",
+    position: "forward",
+    club: "Bali United",
+    image: "https://cdn2.unitedcreative.co.id/files/uploads/BU/player/photo_profile/2026/Jan/30/697c70edda434/forward-jens-raven-19.png",
+    shortNote: "Forward • Bali United (Nov 2026 call-up)",
+    bio: "Jens Raven was included in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 19. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "luke-vickery",
+    name: "Luke Vickery",
+    number: "8",
+    position: "forward",
+    club: "Macarthur FC",
+    image: "assets/images/Luke Vickery.jpeg",
+    shortNote: "Forward • Macarthur FC (Nov 2026 call-up)",
+    bio: "Luke Vickery was selected for Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 8. This is the club number, not an Indonesia national-team number.",
+  },
+  {
+    id: "rafael-struick",
+    name: "Rafael Struick",
+    number: "27",
+    position: "forward",
+    club: "Dewa United",
+    image: "https://imgcdn.harianjogja.com/images/posts/2025/07/16/1220888/dewa_struick.jpg",
+    shortNote: "Forward • Dewa United (Nov 2026 call-up)",
+    bio: "Rafael Struick was named in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 27. This is the club number, not an Indonesia national-team number.",
   },
   {
     id: "ragnar-oratmangoen",
     name: "Ragnar Oratmangoen",
-    number: "TBA",
+    number: "77",
     position: "forward",
+    club: "Persib Bandung",
     image: "assets/images/Ragnar Oratmangoen.jpeg",
-    shortNote: "Forward • Number TBA",
-    bio: "Indonesian National Team forward portrait. Jersey number is obscured in this frame; official stats and bio are placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
-  {
-    id: "mitchell-baker",
-    name: "Mitchell Baker",
-    number: "09",
-    position: "forward",
-    image: "assets/images/Mitchell Baker.jpeg",
-    shortNote: "Forward • Kit #09",
-    bio: "Indonesian National Team forward portrait wearing shirt #09. Official match records and career statistics remain placeholders.",
-    statsNote: "Official stats TBA (Placeholder)",
-  },
+    shortNote: "Forward • Persib Bandung (Nov 2026 call-up)",
+    bio: "Ragnar Oratmangoen was included in Indonesia's 22-player training-camp group in Bali, held 9–17 November 2026.",
+    statsNote: "Club shirt number for the 2026/27 season: 77. This is the club number, not an Indonesia national-team number.",
+  }
 ];
 
 const MATCH_DATA = [
   {
-    id: "match-01",
-    competition: "INTERNATIONAL MATCHDAY (TBA)",
-    status: "upcoming",
-    homeCode: "IDN",
-    homeTeam: "INDONESIA",
-    awayCode: "TBA",
-    awayTeam: "OPPONENT TBA",
-    date: "Date TBA",
-    time: "Kickoff TBA",
-    venue: "Venue: To Be Announced",
+    "id": "indonesia-singapore-2026",
+    "competition": "FIFA ASEAN CUP 2026",
+    "status": "finished",
+    "homeCode": "IDN",
+    "homeTeam": "INDONESIA",
+    "awayCode": "SGP",
+    "awayTeam": "SINGAPORE",
+    "date": "25 September 2026",
+    "time": "Full Time",
+    "venue": "Gelora Bung Karno Stadium, Jakarta",
+    "homeScore": 2,
+    "awayScore": 0
   },
   {
-    id: "match-02",
-    competition: "OFFICIAL COMPETITION (TBA)",
-    status: "upcoming",
-    homeCode: "IDN",
-    homeTeam: "INDONESIA",
-    awayCode: "TBA",
-    awayTeam: "OPPONENT TBA",
-    date: "Date TBA",
-    time: "Kickoff TBA",
-    venue: "Venue: To Be Announced",
+    "id": "malaysia-indonesia-2026",
+    "competition": "FIFA ASEAN CUP 2026",
+    "status": "finished",
+    "homeCode": "MAS",
+    "homeTeam": "MALAYSIA",
+    "awayCode": "IDN",
+    "awayTeam": "INDONESIA",
+    "date": "28 September 2026",
+    "time": "Full Time",
+    "venue": "Gelora Bung Karno Stadium, Jakarta",
+    "homeScore": 0,
+    "awayScore": 0
   },
+  {
+    "id": "indonesia-bangladesh-2026",
+    "competition": "FIFA ASEAN CUP 2026",
+    "status": "finished",
+    "homeCode": "IDN",
+    "homeTeam": "INDONESIA",
+    "awayCode": "BAN",
+    "awayTeam": "BANGLADESH",
+    "date": "1 October 2026",
+    "time": "Full Time",
+    "venue": "Gelora Bung Karno Stadium, Jakarta",
+    "homeScore": 9,
+    "awayScore": 2
+  },
+  {
+    "id": "indonesia-thailand-2026",
+    "competition": "FIFA ASEAN CUP 2026 • FINAL",
+    "status": "finished",
+    "homeCode": "IDN",
+    "homeTeam": "INDONESIA",
+    "awayCode": "THA",
+    "awayTeam": "THAILAND",
+    "date": "5 October 2026",
+    "time": "2–2 • Indonesia won 4–2 on penalties",
+    "venue": "Gelora Bung Karno Stadium, Jakarta",
+    "homeScore": 2,
+    "awayScore": 2
+  }
 ];
 
 /* ==============================
@@ -345,7 +439,6 @@ document.addEventListener("DOMContentLoaded", function () {
   initMatchdaySection();
   initSupportForm();
   initProfilePage();
-  initPlaceholderLinks();
   initBackToTop();
   initMotionEnhancements();
 });
@@ -458,6 +551,7 @@ function initSquadSection() {
   const modalBio = document.getElementById("modal-player-description");
   const modalNumber = document.getElementById("modal-player-number");
   const modalRole = document.getElementById("modal-player-role");
+  const modalClub = document.getElementById("modal-player-club");
   const modalStats = document.getElementById("modal-player-stats-note");
   const modalPrevBtn = document.getElementById("modal-prev-player");
   const modalNextBtn = document.getElementById("modal-next-player");
@@ -475,7 +569,7 @@ function initSquadSection() {
       .map(function (player) {
         const positionText = getPositionLabel(player.position);
         const displayNumber =
-          player.number === "TBA" ? "TBA" : "#" + player.number;
+          player.number === "—" ? "NO KIT NUMBER PUBLISHED" : "#" + player.number;
 
         return `
           <article class="player-card" data-category="${escapeHTML(player.position)}" data-player="${escapeHTML(player.id)}">
@@ -488,7 +582,7 @@ function initSquadSection() {
               <div class="player-media">
                 <img
                   src="${escapeHTML(player.image)}"
-                  alt="${escapeHTML(player.name)} — Indonesian National Team ${escapeHTML(positionText)}"
+                  alt="${escapeHTML(player.image.endsWith('player-silhouette.svg') ? 'Neutral player silhouette; individual portrait not available' : player.name + ' — Indonesia national team ' + positionText)}"
                   loading="lazy"
                 />
                 <span class="player-number-ghost">${escapeHTML(displayNumber)}</span>
@@ -578,14 +672,17 @@ function initSquadSection() {
     const positionText = getPositionLabel(player.position);
 
     modalImage.src = player.image;
-    modalImage.alt = player.name + " portrait";
-    modalNumberBg.textContent = player.number === "TBA" ? "—" : player.number;
+    modalImage.alt = player.image.endsWith("player-silhouette.svg")
+      ? "Neutral player silhouette; individual portrait not available"
+      : player.name + " portrait";
+    modalNumberBg.textContent = player.number === "—" ? "—" : player.number;
     modalPosition.textContent = positionText.toUpperCase();
     modalName.textContent = player.name;
     modalBio.textContent = player.bio;
     modalNumber.textContent =
-      player.number === "TBA" ? "TBA (Not Visible)" : "#" + player.number;
+      player.number === "—" ? "Not published for this training-camp list" : "#" + player.number;
     modalRole.textContent = positionText;
+    if (modalClub) modalClub.textContent = player.club;
     modalStats.textContent = player.statsNote;
     modalProfileLink.href = "profile.html?player=" + encodeURIComponent(player.id);
   }
@@ -682,23 +779,25 @@ function initMatchdaySection() {
 
     if (matchCountEl) {
       if (filtered.length === 0) {
-        matchCountEl.textContent = "0 Verified Results Recorded";
+        matchCountEl.textContent = "0 verified match results";
       } else {
         matchCountEl.textContent =
-          "Showing " + filtered.length + " Scheduled Placeholders";
+          "Showing " + filtered.length + " verified match results";
       }
     }
 
     if (filtered.length === 0) {
+      const emptyTitle = filterKey === "upcoming"
+        ? "No Upcoming Fixture Announced"
+        : "No Match Records Available";
+      const emptyCopy = filterKey === "upcoming"
+        ? "As of 27 November 2026, no next senior international fixture had been officially confirmed. PSSI had begun exploring opponents for the March 2027 FIFA Matchday, but no opponent, date, or venue had been announced. The November window was used for a training camp in Bali."
+        : "No match records are available for this filter.";
       matchListEl.innerHTML = `
         <div class="match-empty-state">
-          <span class="mono-kicker">OFFICIAL RESULT ARCHIVE</span>
-          <h3>No Verified Finished Results Yet</h3>
-          <p>
-            Official match scores and final statistics are not fabricated on
-            this platform. Completed fixtures will appear here once verified
-            data is added.
-          </p>
+          <span class="mono-kicker">MATCHDAY UPDATE • 27 NOVEMBER 2026</span>
+          <h3>${emptyTitle}</h3>
+          <p>${emptyCopy}</p>
         </div>
       `;
       return;
@@ -722,7 +821,7 @@ function initMatchdaySection() {
 
               <div class="match-details">
                 <span class="match-date">${escapeHTML(match.date)}</span>
-                <strong>VS</strong>
+                <strong>${match.status === "finished" ? escapeHTML(match.homeScore + " — " + match.awayScore) : "VS"}</strong>
                 <span class="match-time">${escapeHTML(match.time)}</span>
               </div>
 
@@ -921,27 +1020,31 @@ function initProfilePage() {
     const numEl = document.getElementById("dossier-number");
     const roleEl = document.getElementById("dossier-role");
     const statsEl = document.getElementById("dossier-stats");
+    const clubEl = document.getElementById("dossier-club");
     const prevLink = document.getElementById("dossier-prev-link");
     const nextLink = document.getElementById("dossier-next-link");
 
     if (imgEl) {
       imgEl.src = selectedPlayer.image;
-      imgEl.alt = selectedPlayer.name + " portrait";
+      imgEl.alt = selectedPlayer.image.endsWith("player-silhouette.svg")
+        ? "Neutral player silhouette; individual portrait not available"
+        : selectedPlayer.name + " portrait";
     }
     if (bgNumEl) {
       bgNumEl.textContent =
-        selectedPlayer.number === "TBA" ? "—" : selectedPlayer.number;
+        selectedPlayer.number === "—" ? "—" : selectedPlayer.number;
     }
     if (posEl) posEl.textContent = "PLAYER DOSSIER • " + positionLabel.toUpperCase();
     if (nameEl) nameEl.textContent = selectedPlayer.name;
     if (bioEl) bioEl.textContent = selectedPlayer.bio;
     if (numEl) {
       numEl.textContent =
-        selectedPlayer.number === "TBA"
-          ? "TBA (Not Visible)"
+        selectedPlayer.number === "—"
+          ? "Not published for this training-camp list"
           : "#" + selectedPlayer.number;
     }
     if (roleEl) roleEl.textContent = positionLabel;
+    if (clubEl) clubEl.textContent = selectedPlayer.club;
     if (statsEl) statsEl.textContent = selectedPlayer.statsNote;
 
     if (prevLink) {
@@ -954,12 +1057,12 @@ function initProfilePage() {
     }
   }
 
-  // Render quick dossier directory for all 18 players
+  // Render quick dossier directory for all 22 November 2026 training-camp invitees
   if (directoryEl) {
     directoryEl.innerHTML = SQUAD_DATA.map(function (player) {
       const isCurrent = selectedPlayer && selectedPlayer.id === player.id;
       const numberLabel =
-        player.number === "TBA" ? "TBA" : "#" + player.number;
+        player.number === "—" ? "NUMBER NOT LISTED" : "#" + player.number;
       return `
         <a
           href="profile.html?player=${encodeURIComponent(player.id)}"
@@ -967,7 +1070,7 @@ function initProfilePage() {
         >
           <img
             src="${escapeHTML(player.image)}"
-            alt="${escapeHTML(player.name)}"
+            alt="${escapeHTML(player.image.endsWith("player-silhouette.svg") ? "Neutral player silhouette; individual portrait not available" : player.name + " portrait")}"
             loading="lazy"
           />
           <div>
@@ -981,25 +1084,8 @@ function initProfilePage() {
 }
 
 /* ==============================
-   9. PLACEHOLDER LINKS & BACK TO TOP
+   9. BACK TO TOP
 ============================== */
-
-function initPlaceholderLinks() {
-  document.querySelectorAll("[data-placeholder-link]").forEach(function (link) {
-    link.addEventListener("click", function (event) {
-      event.preventDefault();
-      const platform = link.dataset.placeholderLink || "Social";
-      link.setAttribute(
-        "title",
-        platform + " URL is a placeholder for the project owner to configure.",
-      );
-      const labelSpan = link.querySelector("span");
-      if (labelSpan) {
-        labelSpan.textContent = platform + " [Placeholder — Set Your URL]";
-      }
-    });
-  });
-}
 
 function initBackToTop() {
   const backToTopBtn = document.getElementById("back-to-top");
